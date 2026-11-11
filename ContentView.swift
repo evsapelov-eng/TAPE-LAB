@@ -35,7 +35,7 @@ final class TapeEngine: ObservableObject {
             let url = documents.appendingPathComponent(name)
             if FileManager.default.fileExists(atPath: url.path) {
                 do { try load(url) }
-                catch { error = "Could not restore audio: \(error.localizedDescription)" }
+                catch { self.error = "Could not restore audio: \(error.localizedDescription)" }
             }
         }
     }
