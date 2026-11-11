@@ -51,3 +51,16 @@ A tactile hybrid instrument: tape transport + 16-slice sampler + live looper/del
 - Gesture physicality (delta-to-velocity scaling, maximum signed velocity, dead zone).
 - One-shot versus held looping per slice; model as configurable later.
 - Delay range and sync once MASTER transport exists.
+
+## Waveform authenticity and musical play (revision 2026-11-11)
+- Every slice card draws its own actual source-audio interval, never repeats an illustrative waveform. Keep a shared sample-frame coordinate system for playback and drawing.
+- Precompute multiresolution min/max amplitude buckets; use sufficiently high resolution for each slice and zoom. Retain quiet passages, transients and channel peaks; do not fabricate bars. The compact image is an accurate *downsampled envelope*, not literally every individual sample. Zoom allows sample-level inspection when feasible.
+- Slice borders map to exact PCM frame intervals [startFrame, endFrame), and any re-cut triggers an envelope update for that interval.
+- At 16 pads, a 4x4 grid is the performance view; tapping a pad plays its own region. Long press loops that region. Enter edit/zoom mode to change boundaries; avoid conflicting editing and performing gestures.
+- In TAPE mode, short drag motions create signed sample-read velocity for audible vinyl-like scratching, with direction changes and interpolation; no audio illusion from seek alone.
+- Make TAPE and SLICE gesture maps distinct, so vertical movement has no ambiguous action. FINE/WIDE sensitivity for precise scratch or travel.
+- LOOP mode: a captured fragment can repeat and pass into a feedback delay with stability cap. Keep scratch independent of delay tail, and provide an immediate kill/reset control for runaway feedback.
+- Performance strategy: one-shots -> held loops -> scratch per-slice in an explicit SCRATCH modifier -> delay send; later add mutations.
+- For UI waveforms, consider min/max multi-resolution approach demonstrated by MetalWaveformKit, https://github.com/masaconm/MetalWaveformKit. Its demo visualizes waveforms but is not a playable audio engine.
+- For signed tape playback, investigate AVAudioSourceNode PCM render block, https://developer.apple.com/documentation/avfaudio/avaudiosourcenode/init(format:renderblock:). Keep render callback lock-free, allocation-free and nonblocking.
+- Avoid claiming sample-accurate whole-audio representation on a tiny screen: each pixel summarizes a range of real samples; higher zoom exposes more detail.
