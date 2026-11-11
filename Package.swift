@@ -19,6 +19,6 @@ let package = Package(
         )
     ],
     targets: [
-        .executableTarget(name: "AppModule", path: ".", exclude: ["README.md", "DEVELOPMENT.md", "Package.swift"])
+        .executableTarget(name: "AppModule", path: ".", exclude: ["README.md", "DEVELOPMENT.md", "Package.swift", "ContentView.swift", "TAPE-v0.1-README.md"])
     ]
 )
