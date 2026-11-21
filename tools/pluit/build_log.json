@@ -1,0 +1,348 @@
+{
+  "subfolder": "PLUIT - SONIC ARCHITECTURES VOL 01",
+  "presets": [
+    {
+      "name": "01 PD Dust Memory",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/01 PD Dust Memory.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 19,
+      "fx_units": 7,
+      "macros": [
+        "TAPE AGE",
+        "MOVEMENT",
+        "SPACE",
+        "BLOOM"
+      ]
+    },
+    {
+      "name": "02 PD Glass Horizon",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/02 PD Glass Horizon.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_e25451297ba6d084.wav"
+      ],
+      "mod_routes": 15,
+      "fx_units": 6,
+      "macros": [
+        "FROST",
+        "MOVEMENT",
+        "SPACE",
+        "BREATH"
+      ]
+    },
+    {
+      "name": "03 PD Afterimage",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/03 PD Afterimage.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 17,
+      "fx_units": 6,
+      "macros": [
+        "DENSITY",
+        "MOVEMENT",
+        "SPACE",
+        "EVOLVE"
+      ]
+    },
+    {
+      "name": "04 PD Lost Frequency",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/04 PD Lost Frequency.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_8018c3b7bfe47fa6.wav"
+      ],
+      "mod_routes": 16,
+      "fx_units": 6,
+      "macros": [
+        "SIGNAL DECAY",
+        "MOVEMENT",
+        "SPACE",
+        "DISTANCE"
+      ]
+    },
+    {
+      "name": "05 PD Slow Collapse",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/05 PD Slow Collapse.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_4657439d5832e649.wav"
+      ],
+      "mod_routes": 20,
+      "fx_units": 8,
+      "macros": [
+        "MORPH",
+        "MOVEMENT",
+        "SPACE",
+        "COLLAPSE"
+      ]
+    },
+    {
+      "name": "06 BS Submerged",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/06 BS Submerged.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 13,
+      "fx_units": 7,
+      "macros": [
+        "HARMONICS",
+        "CONTOUR",
+        "SPACE",
+        "PUNCH"
+      ]
+    },
+    {
+      "name": "07 BS Broken Pulse",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/07 BS Broken Pulse.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 12,
+      "fx_units": 7,
+      "macros": [
+        "BITE",
+        "FILTER MOTION",
+        "SPACE",
+        "ACCENT"
+      ]
+    },
+    {
+      "name": "08 BS Night Engine",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/08 BS Night Engine.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_008d615b847fbb51.wav"
+      ],
+      "mod_routes": 14,
+      "fx_units": 8,
+      "macros": [
+        "SOFT>DENSE",
+        "MOVEMENT",
+        "SPACE",
+        "GROWL"
+      ]
+    },
+    {
+      "name": "09 BS Soft Pressure",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/09 BS Soft Pressure.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 13,
+      "fx_units": 7,
+      "macros": [
+        "WARMTH",
+        "PLUCK MOTION",
+        "SPACE",
+        "MUTE"
+      ]
+    },
+    {
+      "name": "10 PL Rain Signal",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/10 PL Rain Signal.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 14,
+      "fx_units": 7,
+      "macros": [
+        "WARMTH",
+        "MOVEMENT",
+        "SPACE",
+        "DECAY"
+      ]
+    },
+    {
+      "name": "11 PL Distant Lights",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/11 PL Distant Lights.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 15,
+      "fx_units": 5,
+      "macros": [
+        "GLASS",
+        "MOVEMENT",
+        "SPACE",
+        "LENGTH"
+      ]
+    },
+    {
+      "name": "12 PL Fractal Drops",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/12 PL Fractal Drops.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_9a6d1fc34496c8a3.wav"
+      ],
+      "mod_routes": 18,
+      "fx_units": 6,
+      "macros": [
+        "FRACTURE",
+        "MOVEMENT",
+        "SPACE",
+        "VELO DEPTH"
+      ]
+    },
+    {
+      "name": "13 TX Particle Field",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/13 TX Particle Field.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Samples/User/serum-mcp/smp_2d90ada744700b92.wav"
+      ],
+      "mod_routes": 18,
+      "fx_units": 6,
+      "macros": [
+        "SPECTRUM",
+        "ACTIVITY",
+        "SPACE",
+        "SWELL"
+      ]
+    },
+    {
+      "name": "14 TX Ghost Transmission",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/14 TX Ghost Transmission.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 14,
+      "fx_units": 7,
+      "macros": [
+        "STATIC",
+        "MOVEMENT",
+        "SPACE",
+        "VOICE"
+      ]
+    },
+    {
+      "name": "15 TX Organic System",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/15 TX Organic System.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 2 local files not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Samples/User/serum-mcp/smp_7a73902d7363ef0c.wav",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_6be7878ae750e097.wav"
+      ],
+      "mod_routes": 14,
+      "fx_units": 6,
+      "macros": [
+        "GRAIN/WOOD",
+        "MOVEMENT",
+        "SPACE",
+        "BLOOM"
+      ]
+    },
+    {
+      "name": "16 KY Felt Circuit",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/16 KY Felt Circuit.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 12,
+      "fx_units": 5,
+      "macros": [
+        "FELT",
+        "MOVEMENT",
+        "SPACE",
+        "PEDAL"
+      ]
+    },
+    {
+      "name": "17 KY Worn Cassette",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/17 KY Worn Cassette.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 15,
+      "fx_units": 6,
+      "macros": [
+        "TAPE AGE",
+        "WOW/FLUTTER",
+        "SPACE",
+        "TONE"
+      ]
+    },
+    {
+      "name": "18 KY Blue Hours",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/18 KY Blue Hours.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_1ea8cbc0b721d098.wav"
+      ],
+      "mod_routes": 13,
+      "fx_units": 7,
+      "macros": [
+        "TINE",
+        "AUTO-PAN",
+        "SPACE",
+        "DYNAMICS"
+      ]
+    },
+    {
+      "name": "19 LD Human Error",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/19 LD Human Error.SerumPreset",
+      "dependencies": [],
+      "mod_routes": 19,
+      "fx_units": 7,
+      "macros": [
+        "GRIT",
+        "VIBRATO/DRIFT",
+        "SPACE",
+        "DYNAMICS"
+      ]
+    },
+    {
+      "name": "20 LD Neural Bloom",
+      "path": "/workspace/TAPE-LAB/serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01/20 LD Neural Bloom.SerumPreset",
+      "dependencies": [
+        "NOTE: this preset depends on 1 local file not embedded in the .SerumPreset itself (same real Serum limitation as a hand-drawn wavetable saved from Serum's own editor) -- bundle these alongside the preset if sharing it with anyone else or on another machine:",
+        "  - /workspace/TAPE-LAB/serum/Tables/User/serum-mcp/wt_a8298dad48196cda.wav"
+      ],
+      "mod_routes": 22,
+      "fx_units": 7,
+      "macros": [
+        "HARMONICS",
+        "MOVEMENT",
+        "SPACE",
+        "BLOOM"
+      ]
+    }
+  ],
+  "errors": [],
+  "server": {
+    "name": "serum-mcp",
+    "version": "1.28.1",
+    "tools": [
+      "generate_preset",
+      "edit_preset",
+      "list_parameters",
+      "describe_preset",
+      "list_sample_files",
+      "find_reference_presets",
+      "analyze_sample_file"
+    ]
+  },
+  "list_parameters_sections": [
+    "arp",
+    "arp_clip",
+    "envelope",
+    "fx_params",
+    "fx_type_ids",
+    "global",
+    "granular_oscillator",
+    "lfo",
+    "macro",
+    "mod_dest_targets",
+    "mod_matrix_slot",
+    "mod_source_ids",
+    "multisample_instruments",
+    "multisample_oscillator",
+    "noise_oscillator",
+    "oscillator",
+    "role_starting_points",
+    "simple_arp_shapes",
+    "simple_filter_types",
+    "simple_sub_shapes",
+    "simple_warp_modes",
+    "simple_wavetables",
+    "spectral_oscillator",
+    "sub_oscillator",
+    "voice_filter",
+    "wavetable_oscillator"
+  ],
+  "find_reference_presets": {
+    "ambient pad": 0,
+    "pad": 0,
+    "sub bass": 0,
+    "bass": 0,
+    "pluck": 0,
+    "texture": 0,
+    "keys": 0,
+    "electric piano": 0,
+    "lead": 0,
+    "future garage": 0,
+    "downtempo": 0
+  }
+}

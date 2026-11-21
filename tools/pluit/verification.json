@@ -1,0 +1,692 @@
+{
+  "summary": {
+    "folder": "serum/Presets/User/PLUIT - SONIC ARCHITECTURES VOL 01",
+    "serumpreset_count": 20,
+    "unique_names": true,
+    "numbering_01_20": true,
+    "other_files": [],
+    "presets_with_problems": []
+  },
+  "presets": [
+    {
+      "name": "01 PD Dust Memory",
+      "file": "01 PD Dust Memory.SerumPreset",
+      "problems": [],
+      "bytes": 2728,
+      "mod_slots": 19,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 6,
+        "macro2": 3,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 5,
+      "macro_names": [
+        "TAPE AGE",
+        "MOVEMENT",
+        "SPACE",
+        "BLOOM"
+      ],
+      "active_oscillators": 4,
+      "active_filters": 1,
+      "lfos_used": 3,
+      "fx_chain": [
+        "FXDistortion",
+        "FXChorus",
+        "FXEQ",
+        "FXComp",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "02 PD Glass Horizon",
+      "file": "02 PD Glass Horizon.SerumPreset",
+      "problems": [],
+      "bytes": 2593,
+      "mod_slots": 15,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 5,
+        "macro2": 3,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 5,
+      "macro_names": [
+        "FROST",
+        "MOVEMENT",
+        "SPACE",
+        "BREATH"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 2,
+      "lfos_used": 3,
+      "fx_chain": [
+        "FXEQ",
+        "FXChorus",
+        "FXComp",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Tables/User/serum-mcp/wt_e25451297ba6d084.wav"
+      ]
+    },
+    {
+      "name": "03 PD Afterimage",
+      "file": "03 PD Afterimage.SerumPreset",
+      "problems": [],
+      "bytes": 3762,
+      "mod_slots": 17,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 4,
+        "macro2": 2,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 3,
+      "macro_names": [
+        "DENSITY",
+        "MOVEMENT",
+        "SPACE",
+        "EVOLVE"
+      ],
+      "active_oscillators": 4,
+      "active_filters": 1,
+      "lfos_used": 3,
+      "fx_chain": [
+        "FXDistortion",
+        "FXEQ",
+        "FXComp",
+        "FXPhaser",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "04 PD Lost Frequency",
+      "file": "04 PD Lost Frequency.SerumPreset",
+      "problems": [],
+      "bytes": 2616,
+      "mod_slots": 16,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 5,
+        "macro2": 2,
+        "macro3": 3
+      },
+      "aux_scaled_routes": 5,
+      "macro_names": [
+        "SIGNAL DECAY",
+        "MOVEMENT",
+        "SPACE",
+        "DISTANCE"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 2,
+      "lfos_used": 4,
+      "fx_chain": [
+        "FXDistortion",
+        "FXEQ",
+        "FXChorus",
+        "FXDelay",
+        "FXReverb",
+        "FXComp"
+      ],
+      "dependencies": [
+        "Tables/User/serum-mcp/wt_8018c3b7bfe47fa6.wav"
+      ]
+    },
+    {
+      "name": "05 PD Slow Collapse",
+      "file": "05 PD Slow Collapse.SerumPreset",
+      "problems": [],
+      "bytes": 2774,
+      "mod_slots": 20,
+      "macro_routes": {
+        "macro0": 4,
+        "macro1": 8,
+        "macro2": 3,
+        "macro3": 3
+      },
+      "aux_scaled_routes": 6,
+      "macro_names": [
+        "MORPH",
+        "MOVEMENT",
+        "SPACE",
+        "COLLAPSE"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 2,
+      "lfos_used": 5,
+      "fx_chain": [
+        "FXBode",
+        "FXDistortion",
+        "FXEQ",
+        "FXComp",
+        "FXFlanger",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Tables/User/serum-mcp/wt_4657439d5832e649.wav"
+      ]
+    },
+    {
+      "name": "06 BS Submerged",
+      "file": "06 BS Submerged.SerumPreset",
+      "problems": [],
+      "bytes": 2480,
+      "mod_slots": 13,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 2,
+        "macro2": 2,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 0,
+      "macro_names": [
+        "HARMONICS",
+        "CONTOUR",
+        "SPACE",
+        "PUNCH"
+      ],
+      "active_oscillators": 2,
+      "active_filters": 1,
+      "lfos_used": 0,
+      "fx_chain": [
+        "FXDistortion",
+        "FXSplit",
+        "FXComp",
+        "FXChorus",
+        "FXReverb",
+        "FXEQ",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "07 BS Broken Pulse",
+      "file": "07 BS Broken Pulse.SerumPreset",
+      "problems": [],
+      "bytes": 2541,
+      "mod_slots": 12,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 2,
+        "macro2": 2,
+        "macro3": 3
+      },
+      "aux_scaled_routes": 2,
+      "macro_names": [
+        "BITE",
+        "FILTER MOTION",
+        "SPACE",
+        "ACCENT"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 1,
+      "lfos_used": 1,
+      "fx_chain": [
+        "FXDistortion",
+        "FXComp",
+        "FXEQ",
+        "FXSplit",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "static_table_positions": [
+        "osc0",
+        "osc1"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "08 BS Night Engine",
+      "file": "08 BS Night Engine.SerumPreset",
+      "problems": [],
+      "bytes": 2662,
+      "mod_slots": 14,
+      "macro_routes": {
+        "macro0": 6,
+        "macro1": 2,
+        "macro2": 2,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 2,
+      "macro_names": [
+        "SOFT>DENSE",
+        "MOVEMENT",
+        "SPACE",
+        "GROWL"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 1,
+      "lfos_used": 2,
+      "fx_chain": [
+        "FXDistortion",
+        "FXComp",
+        "FXEQ",
+        "FXFilter",
+        "FXSplit",
+        "FXChorus",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Tables/User/serum-mcp/wt_008d615b847fbb51.wav"
+      ]
+    },
+    {
+      "name": "09 BS Soft Pressure",
+      "file": "09 BS Soft Pressure.SerumPreset",
+      "problems": [],
+      "bytes": 2467,
+      "mod_slots": 13,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 2,
+        "macro2": 2,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 0,
+      "macro_names": [
+        "WARMTH",
+        "PLUCK MOTION",
+        "SPACE",
+        "MUTE"
+      ],
+      "active_oscillators": 2,
+      "active_filters": 1,
+      "lfos_used": 0,
+      "fx_chain": [
+        "FXDistortion",
+        "FXComp",
+        "FXEQ",
+        "FXSplit",
+        "FXChorus",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "static_table_positions": [
+        "osc0"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "10 PL Rain Signal",
+      "file": "10 PL Rain Signal.SerumPreset",
+      "problems": [],
+      "bytes": 4394,
+      "mod_slots": 14,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 3,
+        "macro2": 2,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 2,
+      "macro_names": [
+        "WARMTH",
+        "MOVEMENT",
+        "SPACE",
+        "DECAY"
+      ],
+      "active_oscillators": 2,
+      "active_filters": 1,
+      "lfos_used": 2,
+      "fx_chain": [
+        "FXEQ",
+        "FXComp",
+        "FXDistortion",
+        "FXChorus",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "11 PL Distant Lights",
+      "file": "11 PL Distant Lights.SerumPreset",
+      "problems": [],
+      "bytes": 2453,
+      "mod_slots": 15,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 2,
+        "macro2": 3,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 1,
+      "macro_names": [
+        "GLASS",
+        "MOVEMENT",
+        "SPACE",
+        "LENGTH"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 1,
+      "lfos_used": 1,
+      "fx_chain": [
+        "FXEQ",
+        "FXComp",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "12 PL Fractal Drops",
+      "file": "12 PL Fractal Drops.SerumPreset",
+      "problems": [],
+      "bytes": 2637,
+      "mod_slots": 18,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 2,
+        "macro2": 2,
+        "macro3": 5
+      },
+      "aux_scaled_routes": 5,
+      "macro_names": [
+        "FRACTURE",
+        "MOVEMENT",
+        "SPACE",
+        "VELO DEPTH"
+      ],
+      "active_oscillators": 2,
+      "active_filters": 2,
+      "lfos_used": 1,
+      "fx_chain": [
+        "FXDistortion",
+        "FXEQ",
+        "FXComp",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Tables/User/serum-mcp/wt_9a6d1fc34496c8a3.wav"
+      ]
+    },
+    {
+      "name": "13 TX Particle Field",
+      "file": "13 TX Particle Field.SerumPreset",
+      "problems": [],
+      "bytes": 2850,
+      "mod_slots": 18,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 8,
+        "macro2": 3,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 6,
+      "macro_names": [
+        "SPECTRUM",
+        "ACTIVITY",
+        "SPACE",
+        "SWELL"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 2,
+      "lfos_used": 6,
+      "fx_chain": [
+        "FXEQ",
+        "FXComp",
+        "FXPhaser",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Samples/User/serum-mcp/smp_2d90ada744700b92.wav"
+      ]
+    },
+    {
+      "name": "14 TX Ghost Transmission",
+      "file": "14 TX Ghost Transmission.SerumPreset",
+      "problems": [],
+      "bytes": 3144,
+      "mod_slots": 14,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 5,
+        "macro2": 3,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 4,
+      "macro_names": [
+        "STATIC",
+        "MOVEMENT",
+        "SPACE",
+        "VOICE"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 2,
+      "lfos_used": 4,
+      "fx_chain": [
+        "FXDistortion",
+        "FXEQ",
+        "FXComp",
+        "FXChorus",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "15 TX Organic System",
+      "file": "15 TX Organic System.SerumPreset",
+      "problems": [],
+      "bytes": 2810,
+      "mod_slots": 14,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 5,
+        "macro2": 3,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 5,
+      "macro_names": [
+        "GRAIN/WOOD",
+        "MOVEMENT",
+        "SPACE",
+        "BLOOM"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 2,
+      "lfos_used": 5,
+      "fx_chain": [
+        "FXEQ",
+        "FXComp",
+        "FXChorus",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Samples/User/serum-mcp/smp_7a73902d7363ef0c.wav",
+        "Tables/User/serum-mcp/wt_6be7878ae750e097.wav"
+      ]
+    },
+    {
+      "name": "16 KY Felt Circuit",
+      "file": "16 KY Felt Circuit.SerumPreset",
+      "problems": [],
+      "bytes": 3905,
+      "mod_slots": 12,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 1,
+        "macro2": 2,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 1,
+      "macro_names": [
+        "FELT",
+        "MOVEMENT",
+        "SPACE",
+        "PEDAL"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 1,
+      "lfos_used": 1,
+      "fx_chain": [
+        "FXEQ",
+        "FXComp",
+        "FXDistortion",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "17 KY Worn Cassette",
+      "file": "17 KY Worn Cassette.SerumPreset",
+      "problems": [],
+      "bytes": 4453,
+      "mod_slots": 15,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 5,
+        "macro2": 2,
+        "macro3": 2
+      },
+      "aux_scaled_routes": 4,
+      "macro_names": [
+        "TAPE AGE",
+        "WOW/FLUTTER",
+        "SPACE",
+        "TONE"
+      ],
+      "active_oscillators": 3,
+      "active_filters": 1,
+      "lfos_used": 3,
+      "fx_chain": [
+        "FXDistortion",
+        "FXComp",
+        "FXEQ",
+        "FXChorus",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "static_table_positions": [
+        "osc1"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "18 KY Blue Hours",
+      "file": "18 KY Blue Hours.SerumPreset",
+      "problems": [],
+      "bytes": 3716,
+      "mod_slots": 13,
+      "macro_routes": {
+        "macro0": 2,
+        "macro1": 3,
+        "macro2": 3,
+        "macro3": 3
+      },
+      "aux_scaled_routes": 4,
+      "macro_names": [
+        "TINE",
+        "AUTO-PAN",
+        "SPACE",
+        "DYNAMICS"
+      ],
+      "active_oscillators": 2,
+      "active_filters": 1,
+      "lfos_used": 2,
+      "fx_chain": [
+        "FXEQ",
+        "FXComp",
+        "FXPhaser",
+        "FXChorus",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Tables/User/serum-mcp/wt_1ea8cbc0b721d098.wav"
+      ]
+    },
+    {
+      "name": "19 LD Human Error",
+      "file": "19 LD Human Error.SerumPreset",
+      "problems": [],
+      "bytes": 2770,
+      "mod_slots": 19,
+      "macro_routes": {
+        "macro0": 3,
+        "macro1": 4,
+        "macro2": 2,
+        "macro3": 3
+      },
+      "aux_scaled_routes": 6,
+      "macro_names": [
+        "GRIT",
+        "VIBRATO/DRIFT",
+        "SPACE",
+        "DYNAMICS"
+      ],
+      "active_oscillators": 2,
+      "active_filters": 1,
+      "lfos_used": 2,
+      "fx_chain": [
+        "FXDistortion",
+        "FXComp",
+        "FXEQ",
+        "FXChorus",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "20 LD Neural Bloom",
+      "file": "20 LD Neural Bloom.SerumPreset",
+      "problems": [],
+      "bytes": 2846,
+      "mod_slots": 22,
+      "macro_routes": {
+        "macro0": 2,
+        "macro1": 5,
+        "macro2": 3,
+        "macro3": 6
+      },
+      "aux_scaled_routes": 5,
+      "macro_names": [
+        "HARMONICS",
+        "MOVEMENT",
+        "SPACE",
+        "BLOOM"
+      ],
+      "active_oscillators": 2,
+      "active_filters": 2,
+      "lfos_used": 4,
+      "fx_chain": [
+        "FXEQ",
+        "FXDistortion",
+        "FXComp",
+        "FXHyperD",
+        "FXDelay",
+        "FXReverb",
+        "FXUtils"
+      ],
+      "dependencies": [
+        "Tables/User/serum-mcp/wt_a8298dad48196cda.wav"
+      ]
+    }
+  ]
+}
