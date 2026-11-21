@@ -6,12 +6,13 @@ Date: 2026-11-21 · Environment: Linux container, Node.js 22.23, Claude Code CLI
 
 | Level | Result |
 |---|---|
-| Automated tests (`npm test`) | **69 / 69 passed** (5 files) |
+| Automated tests (`npm test`) | **72 / 72 passed** (6 files) |
 | Extended corpus run (`DIVA_TEST_PRESETS_DIR` = 55 real presets) | **124 / 124 passed** |
 | Structural validation of all 55 reference presets (`cli validate`) | **55 / 55 passed** |
 | Claude Code integration | **passed** — `claude mcp get diva-mcp` → `✓ Connected`; a headless `claude -p` session called `get_library_info`, `generate_preset`, `validate_preset` and received a valid preset |
 | PLUIT — DIVA LAB VOL. 01 | **5 / 5 created**, structural validation passed, bit-identical on regeneration |
-| **Diva load test** | **NOT RUN** — Diva is not installed here and no safe automated loader exists |
+| **Diva load test (user)** | **PASSED for PLUIT — DIVA LAB VOL. 01 v1.0** — all 5 presets loaded and played in the user's Diva (feedback: a bit too loud, occasional clipping → levels fixed in v1.1). Not automated here. |
+| Diva load test, MINIMAL ANALOG VOL. 01 and VOL. 01 v1.1 | not yet run — same file format and template as the confirmed v1.0 |
 | **Audio verification** | **NOT RUN** — no audio rendering |
 
 ## Tests by requirement
@@ -53,7 +54,7 @@ The metadata uses the ASCII name "PLUIT - DIVA LAB VOL. 01" (hyphen instead of e
 
 ## Unconfirmed features (verify in Diva)
 
-1. **Loading of generated text-only presets in Diva** — expected to work (same form as randomizer default output and deepdiva), not verified here.
+1. **Loading of generated text-only presets in Diva** — confirmed by the user for the 5 presets of VOL. 01 v1.0. Each new preset still needs a listening check.
 2. **Edits of presets that contain the binary block** — the block is preserved; that Diva prefers the edited text values over it is assumed, not verified.
 3. Raw-value semantics with **low confidence** (see `docs/PARAMETER_SCHEMA.md`):
    - Dual VCO Eco waveform positions (`OSC/Wave1/2`), ring switch (`OSC/RMPwm`);
@@ -74,3 +75,25 @@ The metadata uses the ASCII name "PLUIT - DIVA LAB VOL. 01" (hyphen instead of e
 3. Check: loads without error; oscillator/filter models match the table above; FX slots as described; play and judge.
 4. Optionally run `node dist/src/cli.js validate <file>` on any preset Diva re-saves and compare with `analyze`.
 5. Report any preset that fails to load — together with the file — so the template or mapping can be corrected.
+
+## Update 2 — output levels and MINIMAL ANALOG VOL. 01
+
+**Feedback:** VOL. 01 v1.0 loaded fine but was "a bit loud, sometimes clipping". v1.0 used Output (`main/CcOp`) 100 and VCA (`VCA1/Vol`) 50–55; real Diva presets have a median of 92 / 42.
+
+**Changes:**
+- Level standard: new presets default to **Output 80 / VCA 42** (`templates/diva-init.h2p`).
+- `level_check` in every generate/validate/bank result: heuristic risk (low/medium/high) from Output, VCA, Triple VCO mixer sum, feedback, resonance (Bite counted double), stacking, plate wet, delay feedback, rotary drive. It is not a loudness measurement. All five v1.0 presets were rated "medium" by it, matching the feedback.
+- VOL. 01 → **v1.1**: Output 74–80, VCA 40–42 (BS Deep Current mixer also reduced). All rated "low". Sound design otherwise unchanged.
+- Gain-staging rules plus percussion and minimal-techno archetypes added to `get_sound_design_guide`.
+- Tests: `tests/level.test.ts` (3 tests).
+
+**PLUIT — MINIMAL ANALOG VOL. 01** (16 presets, `banks/PLUIT - MINIMAL ANALOG VOL. 01/`, spec `banks/specs/pluit-minimal-analog-vol-01.json`): 16/16 created, structural validation passed, all level risk "low", Output 70–78 / VCA 38–42.
+
+| Group | Presets |
+|---|---|
+| Percussion | PRC Analog Tom, PRC Minimal Rim, PRC Metal Tick, PRC Resonant Ping, PRC Noise Hat, PRC Wood Clave |
+| Bass | BS Minimal Sub, BS Rubber Pluck, BS Deep Pulse, BS Bite Growl |
+| Analog (Memories family) | PD Analog Memories II, PD Velvet Haze, KY Dusty Chords |
+| Minimal techno | SQ Dub Chord Stab, SQ Minimal Blip, FX Dub Space |
+
+New unconfirmed point: the depth unit of tune modulation (`OSC/TM1Dpt`), used for the pitch drop of PRC Analog Tom, so the size of the drop must be judged by ear.

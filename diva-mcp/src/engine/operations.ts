@@ -85,6 +85,7 @@ export function generatePreset(specInput: unknown, opts: { subfolder?: string; o
     parameters_set: summarizeApplied(built.applied),
     changed_from_init_template: built.applied.length,
     warnings: built.warnings,
+    level_check: built.validation.level_check,
     validation: built.validation,
     format_note:
       'Text-only .h2p written from the diva-mcp init template (parameter layout of Diva build 16519) with no compressed binary block — the same text-only form produced by u-he-preset-randomizer (default mode) and deepdiva. Load in Diva to confirm.',
@@ -280,6 +281,7 @@ export function generateBank(specs: unknown[], outputFolder: string, opts: BankO
         parameters_set: summarizeApplied(built.applied),
         warnings: built.warnings,
         validation: { structural: validation.structural_validation.status, diva_load_test: 'not_run', audio_verification: 'not_run', errors: validation.errors },
+        level_check: validation.level_check,
         description: describeAnalysis(analysis),
       });
     } catch (e) {
@@ -312,8 +314,9 @@ function bankReadme(bankName: string, results: any[]): string {
   const ok = results.filter((r) => r.ok);
   let md = `# ${bankName}\n\n${ok.length} preset(s) for u-he Diva generated with diva-mcp.\n\n`;
   md += `## Installation\n\nCopy the \`.h2p\` files into a folder inside your Diva **user** preset folder, e.g.\n\n- macOS: \`~/Library/Audio/Presets/u-he/Diva/${bankName}/\`\n- Windows: \`Documents\\u-he\\Diva.data\\UserPresets\\Diva\\${bankName}\\\`\n\nThen use *Refresh* in Diva's preset browser.\n\n`;
-  md += `## Verification status\n\n| Preset | Architecture | Structural validation | Diva load test | Audio verification |\n|---|---|---|---|---|\n`;
-  for (const r of results) md += `| ${r.name} | ${r.architecture ?? '-'} | ${r.ok ? 'passed' : `FAILED: ${r.error ?? r.validation?.errors?.join('; ')}`} | not run | not run |\n`;
+  md += `## Verification status\n\n| Preset | Architecture | Output / VCA | Level risk | Structural validation | Diva load test | Audio verification |\n|---|---|---|---|---|---|---|\n`;
+  for (const r of results) md += `| ${r.name} | ${r.architecture ?? '-'} | ${r.level_check ? `${r.level_check.output} / ${r.level_check.vca}` : '-'} | ${r.level_check?.risk ?? '-'} | ${r.ok ? 'passed' : `FAILED: ${r.error ?? r.validation?.errors?.join('; ')}`} | not run | not run |\n`;
+  md += `\nLevel standard: Output 80 / VCA 42 (real Diva presets: median Output 92, VCA 42). Level risk is a parameter heuristic, not a loudness measurement.\n`;
   md += `\n> These presets passed diva-mcp's structural validation. They have **not** been loaded into Diva or listened to by the tool. Please load each preset in Diva to confirm.\n> Files are text-only .h2p (no compressed binary block), built from diva-mcp's own init template.\n\n`;
   for (const r of ok) {
     md += `## ${r.name}\n\n`;

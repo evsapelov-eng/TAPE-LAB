@@ -81,7 +81,7 @@ Ranges come from maudgrol/deepdiva's VST mapping unless noted, and are widened (
 
 | ID | Label | VST name | Type | Range | Enum | Default (init) | Active for | Confidence | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| `main/CcOp` | Output (main volume) | main: Output | float | 0 .. 200 |  | 100 | all | high | 0..200 (100 = nominal; observed factory-like values 16..180); observed 16..180 (n=55) |
+| `main/CcOp` | Output (main volume) | main: Output | float | 0 .. 200 |  | 80 | all | high | Gain curve (dB per step) is undocumented.; 0..200; real presets: median 92 (Diva 16519 patches 60..92). diva-mcp default 80 for headroom; observed 16..180 (n=55) |
 
 ### Effects
 
@@ -424,7 +424,7 @@ Ranges come from maudgrol/deepdiva's VST mapping unless noted, and are widened (
 | ID | Label | VST name | Type | Range | Enum | Default (init) | Active for | Confidence | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 | `VCA1/Pan` | Pan | VCA1: Pan | float | -100 .. 100 |  | 0 | all | high | observed -20..0 (n=55) |
-| `VCA1/Vol` | Volume (VCA gain) | VCA1: Volume | float | 0 .. 100 |  | 50 | all | high | Positive/high values can subtly overdrive the amplifier.; observed 13..84.5 (n=55) |
+| `VCA1/Vol` | Volume (VCA gain) | VCA1: Volume | float | 0 .. 100 |  | 42 | all | high | High values can subtly overdrive the amplifier (manual). Real presets: median 42, most common 50.; observed 13..84.5 (n=55) |
 | `VCA1/VCA` | VCA source | VCA1: VCA | int | 0 .. 1 | 0=Gate, 1=Env1 _(medium)_ | 1 | all | medium | observed 0..1 (n=55) |
 | `VCA1/ModSrc` | Vol Mod source | VCA1: Modulation | int | 0 .. 23 | mod source index (0..23) | 0 | all | high | Index into the #ms modulation source list written at the top of every preset.; observed 0..21 (n=55) |
 | `VCA1/ModDpt` | Vol Mod amount | VCA1: ModDepth | float | -100 .. 100 |  | 0 | all | high | observed -62..100 (n=55) |

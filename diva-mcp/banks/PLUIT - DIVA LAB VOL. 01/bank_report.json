@@ -140,6 +140,15 @@
         "audio_verification": "not_run",
         "errors": []
       },
+      "level_check": {
+        "risk": "low",
+        "score": 0,
+        "output": 80,
+        "vca": 42,
+        "factors": [],
+        "suggestion": null,
+        "basis": "Heuristic from parameter values only; loudness was not measured."
+      },
       "description": {
         "summary": "Warm / muted, swelling (pad-like) Dual VCO patch through a Cascade filter with modulation movement, Chorus (Classic) + Plate.",
         "character_tags": [
@@ -194,13 +203,13 @@
         "Oscillators": [
           "Oscillator Model [OSC/Model] = 0",
           "Osc 1 Waveform (Triple VCO morph) [OSC/Shape1] = 5.20",
-          "Volume 1 [OSC/Vol1] = 85.00",
+          "Volume 1 [OSC/Vol1] = 80.00",
           "Osc 2 tune / detune [OSC/Tune2] = 0.05",
           "Osc 2 Waveform (Triple VCO morph) [OSC/Shape2] = 6.50",
-          "Volume 2 [OSC/Vol2] = 60.00",
+          "Volume 2 [OSC/Vol2] = 55.00",
           "Osc 3 tune / detune [OSC/Tune3] = -12.00",
           "Osc 3 Waveform (Triple VCO morph) [OSC/Shape3] = 3.00",
-          "Volume 3 / DCO Sub level [OSC/Vol3] = 55.00"
+          "Volume 3 / DCO Sub level [OSC/Vol3] = 50.00"
         ],
         "High-pass / Feedback": [
           "Feedback (post-filter -> mixer) [VCF1/Fback] = 20.00"
@@ -236,7 +245,10 @@
           "Cutoff variance [OPT/CSlop] = 8.00"
         ],
         "Amplifier": [
-          "Volume (VCA gain) [VCA1/Vol] = 55.00"
+          "Volume (VCA gain) [VCA1/Vol] = 40.00"
+        ],
+        "Main": [
+          "Output (main volume) [main/CcOp] = 74.00"
         ]
       },
       "warnings": [],
@@ -245,6 +257,15 @@
         "diva_load_test": "not_run",
         "audio_verification": "not_run",
         "errors": []
+      },
+      "level_check": {
+        "risk": "low",
+        "score": 0,
+        "output": 74,
+        "vca": 40,
+        "factors": [],
+        "suggestion": null,
+        "basis": "Heuristic from parameter values only; loudness was not measured."
       },
       "description": {
         "summary": "Dark, sustained Triple VCO patch through a Ladder filter.",
@@ -339,8 +360,7 @@
         ],
         "Amplifier": [
           "Pan Mod source [VCA1/PanSrc] = 11",
-          "Pan Mod amount [VCA1/PanDpt] = 12.00",
-          "Volume (VCA gain) [VCA1/Vol] = 52.00"
+          "Pan Mod amount [VCA1/PanDpt] = 12.00"
         ],
         "Voice": [
           "Voices (polyphony) [VCC/Voices] = 6"
@@ -375,6 +395,15 @@
         "diva_load_test": "not_run",
         "audio_verification": "not_run",
         "errors": []
+      },
+      "level_check": {
+        "risk": "low",
+        "score": 0,
+        "output": 80,
+        "vca": 42,
+        "factors": [],
+        "suggestion": null,
+        "basis": "Heuristic from parameter values only; loudness was not measured."
       },
       "description": {
         "summary": "Warm / muted, struck, decaying (key-like) DCO patch through a Multimode filter with modulation movement, Chorus (Classic) + Plate.",
@@ -494,6 +523,15 @@
         "audio_verification": "not_run",
         "errors": []
       },
+      "level_check": {
+        "risk": "low",
+        "score": 0,
+        "output": 80,
+        "vca": 42,
+        "factors": [],
+        "suggestion": null,
+        "basis": "Heuristic from parameter values only; loudness was not measured."
+      },
       "description": {
         "summary": "Warm / muted, percussive / plucked Digital patch through a Uhbie filter, Delay + Plate.",
         "character_tags": [
@@ -596,7 +634,10 @@
           "Voice Drift [OSC/Drift] = 25.00"
         ],
         "Amplifier": [
-          "Volume (VCA gain) [VCA1/Vol] = 52.00"
+          "Volume (VCA gain) [VCA1/Vol] = 40.00"
+        ],
+        "Main": [
+          "Output (main volume) [main/CcOp] = 76.00"
         ],
         "Effects": [
           "FX1 type [FX1/Module] = 'Delay1'",
@@ -627,6 +668,15 @@
         "diva_load_test": "not_run",
         "audio_verification": "not_run",
         "errors": []
+      },
+      "level_check": {
+        "risk": "low",
+        "score": 0,
+        "output": 76,
+        "vca": 40,
+        "factors": [],
+        "suggestion": null,
+        "basis": "Heuristic from parameter values only; loudness was not measured."
       },
       "description": {
         "summary": "Warm / muted, sustained Triple VCO patch through a Bite filter, Delay + Plate.",

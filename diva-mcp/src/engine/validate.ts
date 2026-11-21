@@ -2,6 +2,7 @@ import { findParam, H2PDocument, hasBinaryData, paramId, paramLines, parseH2P, s
 import { checkValue, getParam, isActiveFor, loadSchema, parseRaw } from '../schema/schema.js';
 import { FX_MODULES, FX_SECTION_PREFIX, MOD_SOURCES } from '../schema/curation.js';
 import { getModels } from './preset.js';
+import { levelCheck, type LevelCheck } from './level.js';
 
 export type CheckStatus = 'passed' | 'failed' | 'warning' | 'skipped';
 
@@ -14,6 +15,7 @@ export interface ValidationReport {
   info: string[];
   unknown_parameters: string[];
   binary_block: { present: boolean; preserved: boolean | null };
+  level_check: LevelCheck;
   summary: string;
 }
 
@@ -120,6 +122,9 @@ export function validateDocument(doc: H2PDocument, opts: { originalText?: string
   check('footer marker', doc.tail.startsWith(BINARY_MARKER) || doc.tail === '', doc.tail === '' ? 'no footer (allowed)' : 'present', true);
   if (present) info.push('File contains Diva\'s compressed binary block; it is kept verbatim. Its content cannot be parsed or validated.');
 
+  const level = levelCheck(doc);
+  if (level.risk === 'high') warnings.push(`Output level risk high: ${level.factors.join('; ')}. ${level.suggestion ?? ''}`);
+  else if (level.risk === 'medium') info.push(`Output level risk medium: ${level.factors.join('; ')}.`);
   const status = checks.some((c) => c.status === 'failed') ? 'failed' : 'passed';
   return {
     structural_validation: { status, checks },
@@ -130,6 +135,7 @@ export function validateDocument(doc: H2PDocument, opts: { originalText?: string
     info,
     unknown_parameters: unknown,
     binary_block: { present, preserved },
+    level_check: level,
     summary: `Structural validation ${status === 'passed' ? 'passed' : 'FAILED'}. Diva load test: not run. Audio verification: not run.`,
   };
 }

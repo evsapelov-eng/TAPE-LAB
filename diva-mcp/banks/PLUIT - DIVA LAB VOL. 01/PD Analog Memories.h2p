@@ -55,7 +55,7 @@ Character:
 #mv=Gate
 #mv=Env1
 #cm=main
-CcOp=100.00
+CcOp=80.00
 #FX1=1
 #FX2=1
 #cm=PCore
@@ -313,7 +313,7 @@ SMDpt=0.00
 BpUbie=0
 #cm=VCA1
 Pan=0.00
-Vol=50.00
+Vol=42.00
 VCA=1
 ModSrc=0
 ModDpt=0.00

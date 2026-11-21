@@ -699,7 +699,7 @@
    "range_source": "deepdiva VST mapping",
    "enum": null,
    "enum_confidence": null,
-   "default": 100,
+   "default": 80,
    "default_note": "diva-mcp init template value (not a confirmed factory default)",
    "compatibility": {
     "oscillator_models": null,
@@ -708,13 +708,13 @@
     "envelope_models": null
    },
    "global": false,
-   "unit": "0..200 (100 = nominal; observed factory-like values 16..180)",
+   "unit": "0..200; real presets: median 92 (Diva 16519 patches 60..92). diva-mcp default 80 for headroom",
    "confidence": "high",
    "sources": [
     "vst",
     "observed"
    ],
-   "notes": null,
+   "notes": "Gain curve (dB per step) is undocumented.",
    "observed": {
     "count": 55,
     "min": 16,
@@ -11906,7 +11906,7 @@
    "range_source": "deepdiva VST mapping",
    "enum": null,
    "enum_confidence": null,
-   "default": 50,
+   "default": 42,
    "default_note": "diva-mcp init template value (not a confirmed factory default)",
    "compatibility": {
     "oscillator_models": null,
@@ -11919,9 +11919,10 @@
    "confidence": "high",
    "sources": [
     "vst",
-    "manual"
+    "manual",
+    "observed"
    ],
-   "notes": "Positive/high values can subtly overdrive the amplifier.",
+   "notes": "High values can subtly overdrive the amplifier (manual). Real presets: median 42, most common 50.",
    "observed": {
     "count": 55,
     "min": 13,

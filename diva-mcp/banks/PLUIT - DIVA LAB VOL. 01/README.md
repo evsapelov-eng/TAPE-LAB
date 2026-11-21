@@ -13,13 +13,15 @@ Then use *Refresh* in Diva's preset browser.
 
 ## Verification status
 
-| Preset | Architecture | Structural validation | Diva load test | Audio verification |
-|---|---|---|---|---|
-| PD Analog Memories | Dual VCO -> Cascade | passed | not run | not run |
-| BS Deep Current | Triple VCO -> Ladder | passed | not run | not run |
-| KY Faded Piano | DCO -> Multimode | passed | not run | not run |
-| PL Distant Echo | Digital -> Uhbie | passed | not run | not run |
-| LD Northern Light | Triple VCO -> Bite | passed | not run | not run |
+| Preset | Architecture | Output / VCA | Level risk | Structural validation | Diva load test | Audio verification |
+|---|---|---|---|---|---|---|
+| PD Analog Memories | Dual VCO -> Cascade | 80 / 42 | low | passed | not run | not run |
+| BS Deep Current | Triple VCO -> Ladder | 74 / 40 | low | passed | not run | not run |
+| KY Faded Piano | DCO -> Multimode | 80 / 42 | low | passed | not run | not run |
+| PL Distant Echo | Digital -> Uhbie | 80 / 42 | low | passed | not run | not run |
+| LD Northern Light | Triple VCO -> Bite | 76 / 40 | low | passed | not run | not run |
+
+Level standard: Output 80 / VCA 42 (real Diva presets: median Output 92, VCA 42). Level risk is a parameter heuristic, not a loudness measurement.
 
 > These presets passed diva-mcp's structural validation. They have **not** been loaded into Diva or listened to by the tool. Please load each preset in Diva to confirm.
 > Files are text-only .h2p (no compressed binary block), built from diva-mcp's own init template.
@@ -106,14 +108,15 @@ _Inferred from parameter values only. The preset was NOT listened to and no audi
 
 ### Parameters set (relative to the init template)
 
-- **Oscillators:** Oscillator Model [OSC/Model] = 0; Osc 1 Waveform (Triple VCO morph) [OSC/Shape1] = 5.20; Volume 1 [OSC/Vol1] = 85.00; Osc 2 tune / detune [OSC/Tune2] = 0.05; Osc 2 Waveform (Triple VCO morph) [OSC/Shape2] = 6.50; Volume 2 [OSC/Vol2] = 60.00; Osc 3 tune / detune [OSC/Tune3] = -12.00; Osc 3 Waveform (Triple VCO morph) [OSC/Shape3] = 3.00; Volume 3 / DCO Sub level [OSC/Vol3] = 55.00
+- **Oscillators:** Oscillator Model [OSC/Model] = 0; Osc 1 Waveform (Triple VCO morph) [OSC/Shape1] = 5.20; Volume 1 [OSC/Vol1] = 80.00; Osc 2 tune / detune [OSC/Tune2] = 0.05; Osc 2 Waveform (Triple VCO morph) [OSC/Shape2] = 6.50; Volume 2 [OSC/Vol2] = 55.00; Osc 3 tune / detune [OSC/Tune3] = -12.00; Osc 3 Waveform (Triple VCO morph) [OSC/Shape3] = 3.00; Volume 3 / DCO Sub level [OSC/Vol3] = 50.00
 - **High-pass / Feedback:** Feedback (post-filter -> mixer) [VCF1/Fback] = 20.00
 - **Main filter:** Filter Model [VCF1/Model] = 0; Cutoff [VCF1/Freq] = 52.00; Resonance / Emphasis / Peak [VCF1/Res] = 28.00; Key follow (KYBD) [VCF1/KeyScl] = 40.00; Cutoff mod 1 amount [VCF1/FMDpt] = 48.00; Cutoff mod 2 source [VCF1/FM2Src] = 1; Cutoff mod 2 amount [VCF1/FM2Dpt] = 30.00
 - **Envelope 1:** Decay [ENV1/Dec] = 45.00; Sustain [ENV1/Sus] = 70.00; Release [ENV1/Rel] = 12.00; Velocity [ENV1/Vel] = 25.00
 - **Envelope 2:** Decay [ENV2/Dec] = 38.00; Sustain [ENV2/Sus] = 15.00; Release [ENV2/Rel] = 15.00; Velocity [ENV2/Vel] = 40.00
 - **Voice:** Voice Mode [VCC/Mode] = 1; Glide [VCC/Porta] = 6.00; Transpose [VCC/Trsp] = -12
 - **Trimmers:** Voice Drift [OSC/Drift] = 15.00; Cutoff variance [OPT/CSlop] = 8.00
-- **Amplifier:** Volume (VCA gain) [VCA1/Vol] = 55.00
+- **Amplifier:** Volume (VCA gain) [VCA1/Vol] = 40.00
+- **Main:** Output (main volume) [main/CcOp] = 74.00
 
 ## KY Faded Piano
 
@@ -155,7 +158,7 @@ _Inferred from parameter values only. The preset was NOT listened to and no audi
 - **Envelope 1:** Envelope Model [ENV1/Model] = 2; Decay [ENV1/Dec] = 62.00; Sustain [ENV1/Sus] = 18.00; Release [ENV1/Rel] = 38.00; Velocity [ENV1/Vel] = 45.00; Curve (C) [ENV1/Crve] = 1
 - **Envelope 2:** Envelope Model [ENV2/Model] = 2; Decay [ENV2/Dec] = 48.00; Sustain [ENV2/Sus] = 10.00; Release [ENV2/Rel] = 35.00; Velocity [ENV2/Vel] = 55.00; Curve (C) [ENV2/Crve] = 1
 - **LFO 2:** Waveform [LFO2/Wave] = 0; Restart [LFO2/Trig] = 0; Rate (offset from Sync) [LFO2/Rate] = -1.00
-- **Amplifier:** Pan Mod source [VCA1/PanSrc] = 11; Pan Mod amount [VCA1/PanDpt] = 12.00; Volume (VCA gain) [VCA1/Vol] = 52.00
+- **Amplifier:** Pan Mod source [VCA1/PanSrc] = 11; Pan Mod amount [VCA1/PanDpt] = 12.00
 - **Voice:** Voices (polyphony) [VCC/Voices] = 6
 - **Trimmers:** Voice Drift [OSC/Drift] = 25.00; Cutoff variance [OPT/CSlop] = 10.00; Envelope-rate variance [OPT/ESlop] = 12.00
 - **Effects:** FX1 active [main/#FX1] = 1; FX2 type [FX2/Module] = 'Plate2'; FX2 active [main/#FX2] = 1
@@ -250,7 +253,8 @@ _Inferred from parameter values only. The preset was NOT listened to and no audi
 - **Tuning:** Vibrato (LFO1 -> pitch) [OSC/VtoD] = 25.00
 - **Voice:** Voice Mode [VCC/Mode] = 2; Glide [VCC/Porta] = 22.00
 - **Trimmers:** Voice Drift [OSC/Drift] = 25.00
-- **Amplifier:** Volume (VCA gain) [VCA1/Vol] = 52.00
+- **Amplifier:** Volume (VCA gain) [VCA1/Vol] = 40.00
+- **Main:** Output (main volume) [main/CcOp] = 76.00
 - **Effects:** FX1 type [FX1/Module] = 'Delay1'; FX1 active [main/#FX1] = 1; FX2 type [FX2/Module] = 'Plate2'; FX2 active [main/#FX2] = 1
 - **Effects (FX1):** Delay Center time (= feedback time) [Delay1/CDel] = 6.00; Delay Right time [Delay1/RDel] = 4.00; Delay Center Vol [Delay1/CVol] = 15.00; Delay Feedback [Delay1/FeedB] = 35.00; Delay HP (feedback path) [Delay1/HP] = 25.00; Delay LP (feedback path) [Delay1/LP] = 65.00; Delay Wow (tape wobble) [Delay1/Wow] = 15.00
 - **Effects (FX2):** Plate PreDelay [Plate2/Pre] = 25.00; Plate Diffusion [Plate2/Diff] = 90.00; Plate Damp [Plate2/Damp] = 78.00; Plate Decay [Plate2/Decay] = 55.00; Plate Wet [Plate2/Wet] = 22.00

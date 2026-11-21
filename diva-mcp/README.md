@@ -24,8 +24,9 @@ The server contains **no LLM**. Claude does the sound-design reasoning; diva-mcp
 | Edits change only requested parameters | ✅ (line-level check, binary block preserved) |
 | New presets created + structurally valid | ✅ all 5 osc × 5 filter models |
 | Bank generation (README, report, ZIP) | ✅ |
-| PLUIT — DIVA LAB VOL. 01 (5 presets) | ✅ generated — see `banks/` |
-| **Loaded in the real Diva plugin** | ❌ **not verified** — no Diva in the build environment. Please load the presets in Diva. |
+| Banks | PLUIT — DIVA LAB VOL. 01 v1.1 (5) and PLUIT — MINIMAL ANALOG VOL. 01 (16) — see `banks/` |
+| **Loaded in the real Diva plugin** | ✅ confirmed by the user for PLUIT — DIVA LAB VOL. 01 (all 5 load and play); new banks need the same check |
+| Output level standard | Output 80 / VCA 42 by default + heuristic `level_check` (not a loudness measurement) |
 | Audio verification | ❌ not performed (no rendering) |
 
 See [docs/TEST_REPORT.md](docs/TEST_REPORT.md) for details and the list of unconfirmed features.
@@ -38,7 +39,7 @@ Requirements: Node.js ≥ 20, Claude Code.
 cd diva-mcp
 npm install
 npm run build
-npm test            # optional: 69 tests
+npm test            # optional: 72 tests
 ```
 
 Register with Claude Code (use the absolute path of your checkout):

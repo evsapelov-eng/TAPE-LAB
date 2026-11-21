@@ -1,0 +1,1694 @@
+{
+  "bank_name": "PLUIT - MINIMAL ANALOG VOL. 01",
+  "presets": [
+    {
+      "meta": {
+        "name": "PRC Analog Tom",
+        "author": "PLUIT / diva-mcp",
+        "description": "Round analogue tom/kick-tom: a triangle-ish VCO with a fast pitch drop from Env2.",
+        "usage": "Play C1-C3 for different tom pitches. Velocity = level and punch.",
+        "categories": [
+          "Drums:Percussion"
+        ],
+        "features": [
+          "Poly",
+          "Dry",
+          "Percussive"
+        ],
+        "character": [
+          "Warm",
+          "Punchy"
+        ]
+      },
+      "concept": {
+        "intent": "A warm, rounded analogue tom that sits under minimal grooves.",
+        "spectral": "Single Triple VCO oscillator near triangle; mixer feedback for low weight.",
+        "temporal": "Instant attack, short decay, no sustain; Env2 drops the pitch quickly.",
+        "filtering": "Ladder at a medium cutoff, little resonance.",
+        "modulation": "Env2 -> pitch (tune mod 1, osc 1 only). Depth unit of tune mod is not confirmed; amount chosen conservatively.",
+        "architecture": "Triple VCO + Ladder: the only model with per-oscillator tune-mod switches and a mixer feedback path."
+      },
+      "oscillator": {
+        "model": "triple_vco",
+        "osc1": {
+          "octave": 0,
+          "shape": 3,
+          "volume": 90
+        },
+        "osc2": {
+          "volume": 0
+        },
+        "osc3": {
+          "volume": 0
+        },
+        "noise": {
+          "volume": 0
+        },
+        "feedback": 15,
+        "tune_mod_targets": [
+          1
+        ],
+        "shape_mod_targets": []
+      },
+      "filter": {
+        "model": "ladder",
+        "cutoff": 80,
+        "resonance": 10,
+        "key_follow": 50,
+        "slope": "24db"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 35,
+        "sustain": 0,
+        "release": 30,
+        "velocity": 40
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 18,
+        "sustain": 0,
+        "release": 15,
+        "velocity": 20
+      },
+      "modulation": {
+        "pitch_1": {
+          "source": "Env2",
+          "amount": 14
+        },
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 10
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8,
+        "transpose": -12
+      },
+      "amp": {
+        "output": 78,
+        "volume": 42,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "PRC Minimal Rim",
+        "author": "PLUIT / diva-mcp",
+        "description": "Short, woody rim/click: pulse + noise through a resonant band-pass.",
+        "usage": "Velocity = level. Works high on the keyboard too.",
+        "categories": [
+          "Drums:Percussion"
+        ],
+        "features": [
+          "Poly",
+          "Percussive"
+        ],
+        "character": [
+          "Dry",
+          "Clicky"
+        ]
+      },
+      "concept": {
+        "intent": "A tight rim click for minimal techno grooves.",
+        "spectral": "Dual VCO: pulse + noise on VCO1, a sine a fifth above on VCO2 for a tonal knock.",
+        "temporal": "Very short envelopes (decay ~10).",
+        "filtering": "Multimode band-pass with moderate resonance; HPF Pre removes body.",
+        "space": "A tiny, short plate for room.",
+        "architecture": "Dual VCO + Multimode BP: only Multimode offers a dedicated band-pass mode."
+      },
+      "oscillator": {
+        "model": "dual_vco",
+        "osc1": {
+          "octave": 0,
+          "triangle": false,
+          "saw": false,
+          "pulse": true,
+          "noise": true
+        },
+        "osc2": {
+          "semitones": 7,
+          "sine": true,
+          "triangle": false,
+          "saw": false,
+          "pulse": false
+        },
+        "pulse_width": 30,
+        "mix": 40
+      },
+      "hpf": {
+        "model": "pre",
+        "frequency": 60
+      },
+      "filter": {
+        "model": "multimode",
+        "mode": "bp",
+        "cutoff": 98,
+        "resonance": 35,
+        "key_follow": 60
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 10,
+        "sustain": 0,
+        "release": 8,
+        "velocity": 50
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 8,
+        "sustain": 0,
+        "release": 6,
+        "velocity": 30
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 25
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "fx1": {
+        "type": "plate",
+        "predelay": 0,
+        "diffusion": 80,
+        "damp": 85,
+        "decay": 22,
+        "size": 50,
+        "dry": 95,
+        "wet": 15
+      },
+      "amp": {
+        "output": 76,
+        "volume": 42,
+        "vca": "env1"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "PRC Metal Tick",
+        "author": "PLUIT / diva-mcp",
+        "description": "Metallic tick/cowbell-ish hit: three VCOs at inharmonic ratios with FM, high-passed.",
+        "usage": "Velocity = level.",
+        "categories": [
+          "Drums:Percussion"
+        ],
+        "features": [
+          "Poly",
+          "Percussive"
+        ],
+        "character": [
+          "Metallic",
+          "Bright"
+        ]
+      },
+      "concept": {
+        "intent": "A short metallic accent for off-beats.",
+        "spectral": "Triple VCO tuned to non-harmonic intervals (+6.6 and +17.3 semitones) with FM 1->2/3 for clangorous sidebands.",
+        "temporal": "Very short decay.",
+        "filtering": "Multimode high-pass keeps it thin and bright.",
+        "architecture": "Triple VCO is the only model with three independently tuned oscillators plus FM."
+      },
+      "oscillator": {
+        "model": "triple_vco",
+        "osc1": {
+          "octave": 0,
+          "shape": 5,
+          "volume": 70
+        },
+        "osc2": {
+          "semitones": 6.6,
+          "shape": 7,
+          "volume": 60
+        },
+        "osc3": {
+          "semitones": 17.3,
+          "shape": 8,
+          "volume": 40
+        },
+        "fm": 55,
+        "noise": {
+          "volume": 0
+        },
+        "feedback": 0,
+        "tune_mod_targets": [],
+        "shape_mod_targets": []
+      },
+      "filter": {
+        "model": "multimode",
+        "mode": "hp",
+        "cutoff": 105,
+        "resonance": 20,
+        "key_follow": 40
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 9,
+        "sustain": 0,
+        "release": 7,
+        "velocity": 45
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 7,
+        "sustain": 0,
+        "release": 6,
+        "velocity": 20
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 12
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "amp": {
+        "output": 74,
+        "volume": 40,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "PRC Resonant Ping",
+        "author": "PLUIT / diva-mcp",
+        "description": "Filter ping: a short noise/osc burst excites a near-self-oscillating ladder that tracks the keyboard.",
+        "usage": "Pitch follows the keyboard (key follow 100). Velocity = level.",
+        "categories": [
+          "Drums:Percussion"
+        ],
+        "features": [
+          "Poly",
+          "Percussive"
+        ],
+        "character": [
+          "Glassy",
+          "Resonant"
+        ]
+      },
+      "concept": {
+        "intent": "Pitched 'pings' and bleeps made by the filter itself \u2014 classic minimal percussion.",
+        "spectral": "Very low oscillator and noise levels: the resonance does the work (Diva manual tip: lower input levels let resonance speak).",
+        "temporal": "Short amp decay, very short Env2 kick into the filter.",
+        "filtering": "Ladder, resonance 88, key follow 100.",
+        "architecture": "Triple VCO (mixer gives fine control of the low input level) + Ladder."
+      },
+      "oscillator": {
+        "model": "triple_vco",
+        "osc1": {
+          "octave": 0,
+          "shape": 3,
+          "volume": 25
+        },
+        "osc2": {
+          "volume": 0
+        },
+        "osc3": {
+          "volume": 0
+        },
+        "noise": {
+          "volume": 30,
+          "color": "white"
+        },
+        "feedback": 0,
+        "tune_mod_targets": [],
+        "shape_mod_targets": []
+      },
+      "filter": {
+        "model": "ladder",
+        "cutoff": 82,
+        "resonance": 88,
+        "key_follow": 100,
+        "slope": "24db"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 30,
+        "sustain": 0,
+        "release": 30,
+        "velocity": 40
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 10,
+        "sustain": 0,
+        "release": 8,
+        "velocity": 30
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 30
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "amp": {
+        "output": 70,
+        "volume": 38,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "PRC Noise Hat",
+        "author": "PLUIT / diva-mcp",
+        "description": "Closed analogue hi-hat: white noise through a resonant high-pass.",
+        "usage": "Velocity = level. Shorter on higher keys (env key follow).",
+        "categories": [
+          "Drums:Hihat"
+        ],
+        "features": [
+          "Poly",
+          "Percussive"
+        ],
+        "character": [
+          "Bright",
+          "Crisp"
+        ]
+      },
+      "concept": {
+        "intent": "A crisp closed hat to complete a minimal kit.",
+        "spectral": "White noise only (all VCOs muted).",
+        "temporal": "Very short decay; envelope key follow shortens high notes.",
+        "filtering": "Multimode HP with a little resonance.",
+        "architecture": "Triple VCO's mixer has a white/pink noise selector; Multimode supplies the high-pass."
+      },
+      "oscillator": {
+        "model": "triple_vco",
+        "osc1": {
+          "volume": 0
+        },
+        "osc2": {
+          "volume": 0
+        },
+        "osc3": {
+          "volume": 0
+        },
+        "noise": {
+          "volume": 100,
+          "color": "white"
+        },
+        "feedback": 0,
+        "tune_mod_targets": [],
+        "shape_mod_targets": []
+      },
+      "filter": {
+        "model": "multimode",
+        "mode": "hp",
+        "cutoff": 118,
+        "resonance": 18,
+        "key_follow": 0
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 7,
+        "sustain": 0,
+        "release": 6,
+        "velocity": 45,
+        "key_follow": 30
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 6,
+        "sustain": 0,
+        "release": 5,
+        "velocity": 20
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "amp": {
+        "output": 74,
+        "volume": 40,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "PRC Wood Clave",
+        "author": "PLUIT / diva-mcp",
+        "description": "Hollow clave/wood-block: digital triangle through a band-pass Uhbie, with a short dub echo.",
+        "usage": "Velocity = level.",
+        "categories": [
+          "Drums:Percussion"
+        ],
+        "features": [
+          "Poly",
+          "Percussive",
+          "Stereo"
+        ],
+        "character": [
+          "Woody",
+          "Dry"
+        ]
+      },
+      "concept": {
+        "intent": "A woody, tonal clave with a dub-techno echo tail.",
+        "spectral": "Digital triangle (with its synced sine harmonic).",
+        "temporal": "Short decay.",
+        "filtering": "Uhbie with mix at the band-pass centre and moderate resonance.",
+        "space": "Damped 3/16 delay with a little wow.",
+        "architecture": "Digital + Uhbie: clean source, SEM-style band-pass."
+      },
+      "oscillator": {
+        "model": "digital",
+        "osc1": {
+          "octave": 0,
+          "wave": "triangle"
+        },
+        "osc2": {
+          "semitones": 12,
+          "wave": "triangle"
+        },
+        "mix": 0,
+        "high_quality": true
+      },
+      "filter": {
+        "model": "uhbie",
+        "cutoff": 90,
+        "resonance": 45,
+        "key_follow": 60,
+        "uhbie_mix": 50,
+        "uhbie_center": "bandpass"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 12,
+        "sustain": 0,
+        "release": 10,
+        "velocity": 45
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 10,
+        "sustain": 0,
+        "release": 8,
+        "velocity": 20
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 20
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "fx1": {
+        "type": "delay",
+        "left": 3,
+        "center": 6,
+        "right": 3,
+        "side_vol": 25,
+        "center_vol": 10,
+        "feedback": 30,
+        "hp": 30,
+        "lp": 50,
+        "dry": 100,
+        "wow": 20
+      },
+      "amp": {
+        "output": 78,
+        "volume": 42,
+        "vca": "env1"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "BS Minimal Sub",
+        "author": "PLUIT / diva-mcp",
+        "description": "Clean sub bass: DCO square plus sub-oscillator through a low ladder.",
+        "usage": "Mono. Velocity = slight brightness.",
+        "categories": [
+          "Bass:Synth"
+        ],
+        "features": [
+          "Mono",
+          "Dry"
+        ],
+        "character": [
+          "Deep",
+          "Clean"
+        ]
+      },
+      "concept": {
+        "intent": "A clean, solid sub that leaves room for the kick.",
+        "spectral": "DCO PW-reactive pulse at 50% (square) plus sub-oscillator one octave down.",
+        "temporal": "Instant attack, medium sustain, short release.",
+        "filtering": "Ladder low cutoff, little resonance, small Env2 bump for definition.",
+        "architecture": "DCO + Ladder: very stable pitch for a sub, round filter."
+      },
+      "oscillator": {
+        "model": "dco",
+        "octave": 0,
+        "pulse_shape": 3,
+        "pulse_width": 50,
+        "saw_shape": 0,
+        "sub_shape": 0,
+        "sub_volume": 80,
+        "noise_volume": 0
+      },
+      "filter": {
+        "model": "ladder",
+        "cutoff": 50,
+        "resonance": 8,
+        "key_follow": 30,
+        "slope": "24db"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 40,
+        "sustain": 60,
+        "release": 10,
+        "velocity": 20
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 25,
+        "sustain": 0,
+        "release": 10,
+        "velocity": 30
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 20
+        }
+      },
+      "voice": {
+        "mode": "mono",
+        "note_priority": "last",
+        "transpose": -12
+      },
+      "amp": {
+        "output": 76,
+        "volume": 42,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "BS Rubber Pluck",
+        "author": "PLUIT / diva-mcp",
+        "description": "Rubbery minimal bass: two saws an octave apart, resonant ladder with a snappy envelope, legato glide.",
+        "usage": "Legato = glide. Velocity = filter punch.",
+        "categories": [
+          "Bass:Synth"
+        ],
+        "features": [
+          "Mono",
+          "Glide"
+        ],
+        "character": [
+          "Bouncy",
+          "Resonant"
+        ]
+      },
+      "concept": {
+        "intent": "A bouncy, slightly acidic minimal-techno bass line sound.",
+        "spectral": "Dual VCO saws, VCO2 an octave down; mild filter feedback.",
+        "temporal": "Short filter decay, medium amp sustain.",
+        "filtering": "Ladder, resonance 48, Env2 +55 with velocity.",
+        "modulation": "Env2 -> cutoff.",
+        "architecture": "Dual VCO + Ladder with HPF = Feedback for extra low-end weight."
+      },
+      "oscillator": {
+        "model": "dual_vco",
+        "osc1": {
+          "octave": 0,
+          "saw": true,
+          "pulse": false,
+          "triangle": false,
+          "noise": false
+        },
+        "osc2": {
+          "semitones": -12,
+          "saw": true,
+          "sine": false,
+          "triangle": false,
+          "pulse": false
+        },
+        "mix": 35,
+        "feedback": 15
+      },
+      "hpf": {
+        "model": "feedback"
+      },
+      "filter": {
+        "model": "ladder",
+        "cutoff": 48,
+        "resonance": 48,
+        "key_follow": 40,
+        "slope": "24db"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 45,
+        "sustain": 50,
+        "release": 12,
+        "velocity": 25
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 22,
+        "sustain": 0,
+        "release": 15,
+        "velocity": 50
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 55
+        }
+      },
+      "voice": {
+        "mode": "legato",
+        "note_priority": "last",
+        "glide": 10,
+        "glide_mode": "time",
+        "transpose": -12
+      },
+      "amp": {
+        "output": 72,
+        "volume": 40,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "BS Deep Pulse",
+        "author": "PLUIT / diva-mcp",
+        "description": "Deep techno bass: square-ish main VCO, detuned saw and a sub triangle through a rough cascade.",
+        "usage": "Velocity = brightness.",
+        "categories": [
+          "Bass:Synth"
+        ],
+        "features": [
+          "Mono",
+          "Dry"
+        ],
+        "character": [
+          "Deep",
+          "Phat"
+        ]
+      },
+      "concept": {
+        "intent": "A heavy, hypnotic pulse bass for long minimal grooves.",
+        "spectral": "Triple VCO: ~square osc1, saw osc2 +4 cents, triangle osc3 an octave down; light feedback.",
+        "temporal": "Instant attack, short filter envelope.",
+        "filtering": "Cascade (rough) low cutoff; Env2 +35; velocity on cutoff mod 2.",
+        "architecture": "Triple VCO + Cascade: dense source, smoother than Ladder at high input."
+      },
+      "oscillator": {
+        "model": "triple_vco",
+        "osc1": {
+          "octave": 0,
+          "shape": 7,
+          "volume": 80
+        },
+        "osc2": {
+          "semitones": 0.04,
+          "shape": 5,
+          "volume": 45
+        },
+        "osc3": {
+          "semitones": -12,
+          "shape": 3,
+          "volume": 50
+        },
+        "noise": {
+          "volume": 0
+        },
+        "feedback": 10,
+        "fm": 0,
+        "tune_mod_targets": [],
+        "shape_mod_targets": []
+      },
+      "filter": {
+        "model": "cascade",
+        "cutoff": 52,
+        "resonance": 20,
+        "key_follow": 35,
+        "slope": "24db",
+        "character": "rough"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 50,
+        "sustain": 70,
+        "release": 12,
+        "velocity": 25
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 30,
+        "sustain": 10,
+        "release": 12,
+        "velocity": 35
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 35
+        },
+        "cutoff_2": {
+          "source": "Velocity",
+          "amount": 15
+        }
+      },
+      "voice": {
+        "mode": "mono",
+        "note_priority": "last",
+        "transpose": -12
+      },
+      "amp": {
+        "output": 74,
+        "volume": 40,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "BS Bite Growl",
+        "author": "PLUIT / diva-mcp",
+        "description": "Growling bass: DCO pulse + saw through Bite filters (HPF Bite + VCF Bite), slow PWM.",
+        "usage": "Velocity = growl.",
+        "categories": [
+          "Bass:Synth"
+        ],
+        "features": [
+          "Mono"
+        ],
+        "character": [
+          "Aggressive",
+          "Gritty"
+        ]
+      },
+      "concept": {
+        "intent": "A gritty, MS-20-flavoured bass for darker minimal tracks.",
+        "spectral": "DCO pulse (PWM by slow LFO2) + saw + some sub.",
+        "filtering": "HPF Bite Rev 1 trims mud; VCF Bite Rev 1 with resonance 45 adds growl.",
+        "modulation": "Env2 -> cutoff, LFO2 -> PW.",
+        "architecture": "DCO + Bite: stable oscillator into the most characterful filter."
+      },
+      "oscillator": {
+        "model": "dco",
+        "octave": 0,
+        "pulse_shape": 3,
+        "pulse_width": 35,
+        "saw_shape": 1,
+        "sub_shape": 0,
+        "sub_volume": 40,
+        "noise_volume": 0
+      },
+      "hpf": {
+        "model": "bite",
+        "frequency": 40,
+        "resonance": 20,
+        "revision": 1
+      },
+      "filter": {
+        "model": "bite",
+        "revision": 1,
+        "cutoff": 58,
+        "resonance": 45,
+        "key_follow": 40
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 40,
+        "sustain": 65,
+        "release": 12,
+        "velocity": 25
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 28,
+        "sustain": 15,
+        "release": 12,
+        "velocity": 40
+      },
+      "lfo2": {
+        "waveform": "triangle",
+        "restart": "sync",
+        "sync_raw": -2,
+        "rate": -0.5,
+        "depth": 100,
+        "depth_source": "none"
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 40
+        },
+        "pulse_width": {
+          "source": "LFO2",
+          "amount": 8
+        }
+      },
+      "voice": {
+        "mode": "mono",
+        "note_priority": "last",
+        "transpose": -12
+      },
+      "amp": {
+        "output": 70,
+        "volume": 38,
+        "vca": "env1"
+      },
+      "fx1": {
+        "type": "off"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "PD Analog Memories II",
+        "author": "PLUIT / diva-mcp",
+        "description": "Darker, tape-worn sequel to Analog Memories: detuned saws, more drift, chorus into a wobbling delay.",
+        "usage": "Hold chords. Velocity = level.",
+        "categories": [
+          "Pads:Analogue"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Warm",
+          "Vintage",
+          "Dark",
+          "Moving"
+        ]
+      },
+      "concept": {
+        "intent": "The same warm memory, further away: darker, wobblier, like an old cassette copy.",
+        "references": [
+          "PD Analog Memories (PLUIT VOL. 01)"
+        ],
+        "spectral": "Dual VCO saws, VCO2 +11 cents.",
+        "temporal": "Slower swell and longer release than the original.",
+        "filtering": "Cascade cutoff 66 (darker), low resonance.",
+        "modulation": "Env2 slow -> cutoff; LFO2 random restart breathes cutoff; LFO1 random-glide vibrato; drift 90.",
+        "space": "Classic chorus -> damped delay with wow 60 (tape).",
+        "architecture": "Same Dual VCO + Cascade as the original you liked."
+      },
+      "oscillator": {
+        "model": "dual_vco",
+        "osc1": {
+          "octave": 0,
+          "triangle": false,
+          "saw": true,
+          "pulse": false,
+          "noise": false
+        },
+        "osc2": {
+          "semitones": 0.11,
+          "sine": false,
+          "triangle": false,
+          "saw": true,
+          "pulse": false
+        },
+        "mix": 45,
+        "sync": false,
+        "cross_mod": 0,
+        "shape_model": "analog1"
+      },
+      "hpf": {
+        "model": "pre",
+        "frequency": 40
+      },
+      "filter": {
+        "model": "cascade",
+        "cutoff": 66,
+        "resonance": 10,
+        "key_follow": 30,
+        "slope": "24db",
+        "character": "clean"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 55,
+        "decay": 60,
+        "sustain": 85,
+        "release": 62,
+        "velocity": 20
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 60,
+        "decay": 70,
+        "sustain": 40,
+        "release": 60,
+        "velocity": 10
+      },
+      "lfo1": {
+        "waveform": "random_glide",
+        "restart": "random",
+        "sync_raw": -2,
+        "rate": -1.5,
+        "depth": 100,
+        "depth_source": "none"
+      },
+      "lfo2": {
+        "waveform": "triangle",
+        "restart": "random",
+        "sync_raw": -2,
+        "rate": -2,
+        "depth": 100,
+        "depth_source": "none"
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 16
+        },
+        "cutoff_2": {
+          "source": "LFO2",
+          "amount": 7
+        },
+        "vibrato": 5
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "trimmers": {
+        "drift": 90,
+        "detune_amount": 30,
+        "voice_detune": {
+          "osc1": [
+            7,
+            -5,
+            4,
+            -8,
+            6,
+            -3,
+            5,
+            -6
+          ],
+          "osc2": [
+            -6,
+            8,
+            -4,
+            5,
+            -7,
+            3,
+            -5,
+            7
+          ]
+        },
+        "cutoff_variance": 18,
+        "envelope_variance": 12
+      },
+      "fx1": {
+        "type": "chorus",
+        "variant": "classic",
+        "rate": 22,
+        "depth": 60,
+        "wet": 65
+      },
+      "fx2": {
+        "type": "delay",
+        "left": 4,
+        "center": 6,
+        "right": 8,
+        "side_vol": 25,
+        "center_vol": 0,
+        "feedback": 40,
+        "hp": 25,
+        "lp": 45,
+        "dry": 100,
+        "wow": 60
+      },
+      "amp": {
+        "output": 78,
+        "volume": 42,
+        "vca": "env1"
+      }
+    },
+    {
+      "meta": {
+        "name": "PD Velvet Haze",
+        "author": "PLUIT / diva-mcp",
+        "description": "Three detuned saws, smooth cascade, gentle shape movement, ensemble chorus and plate.",
+        "usage": "Hold chords.",
+        "categories": [
+          "Pads:Analogue"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Warm",
+          "Lush",
+          "Soft"
+        ]
+      },
+      "concept": {
+        "intent": "A lush, velvety analogue bed, sibling of Analog Memories but fuller.",
+        "spectral": "Triple VCO, three saws detuned +9 / -7 cents.",
+        "temporal": "Slow attack, long release.",
+        "filtering": "Cascade clean at 72.",
+        "modulation": "LFO2 -> cutoff (5) and -> waveform shape of osc 2+3 (8) for slow animation; drift 50.",
+        "space": "Ensemble chorus -> plate.",
+        "architecture": "Triple VCO + Cascade: three oscillators make the thickest pad source; Cascade handles dense input smoothly."
+      },
+      "oscillator": {
+        "model": "triple_vco",
+        "osc1": {
+          "octave": 0,
+          "shape": 5,
+          "volume": 70
+        },
+        "osc2": {
+          "semitones": 0.09,
+          "shape": 5,
+          "volume": 65
+        },
+        "osc3": {
+          "semitones": -0.07,
+          "shape": 5,
+          "volume": 55
+        },
+        "noise": {
+          "volume": 0
+        },
+        "feedback": 0,
+        "fm": 0,
+        "tune_mod_targets": [],
+        "shape_mod_targets": [
+          2,
+          3
+        ]
+      },
+      "filter": {
+        "model": "cascade",
+        "cutoff": 72,
+        "resonance": 10,
+        "key_follow": 35,
+        "slope": "24db",
+        "character": "clean"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 52,
+        "decay": 60,
+        "sustain": 90,
+        "release": 60,
+        "velocity": 20
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 60,
+        "decay": 70,
+        "sustain": 50,
+        "release": 60,
+        "velocity": 10
+      },
+      "lfo2": {
+        "waveform": "triangle",
+        "restart": "random",
+        "sync_raw": -2,
+        "rate": -1.5,
+        "depth": 100,
+        "depth_source": "none"
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 15
+        },
+        "cutoff_2": {
+          "source": "LFO2",
+          "amount": 5
+        },
+        "shape": {
+          "source": "LFO2",
+          "amount": 8
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "trimmers": {
+        "drift": 50,
+        "cutoff_variance": 12
+      },
+      "fx1": {
+        "type": "chorus",
+        "variant": "ensemble",
+        "rate": 20,
+        "depth": 50,
+        "wet": 60
+      },
+      "fx2": {
+        "type": "plate",
+        "predelay": 25,
+        "diffusion": 90,
+        "damp": 78,
+        "decay": 65,
+        "size": 165,
+        "dry": 88,
+        "wet": 30
+      },
+      "amp": {
+        "output": 76,
+        "volume": 40,
+        "vca": "env1"
+      }
+    },
+    {
+      "meta": {
+        "name": "KY Dusty Chords",
+        "author": "PLUIT / diva-mcp",
+        "description": "Deep-house/minimal chord keys: DCO pulse + saw, soft LP2, Juno-style chorus and a short plate.",
+        "usage": "Play chords; velocity = brightness.",
+        "categories": [
+          "Keys:Chords"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Warm",
+          "Vintage",
+          "Soft"
+        ]
+      },
+      "concept": {
+        "intent": "Dusty, slightly worn chord keys for deep minimal.",
+        "spectral": "DCO pulse (40%) + saw + a little sub and noise.",
+        "temporal": "Struck envelope, low sustain; digital envelope with curve.",
+        "filtering": "Multimode LP2 (brighter 2-pole) at 68.",
+        "space": "Classic chorus -> short dark plate.",
+        "architecture": "DCO + Multimode + Chorus: the Juno-style chain."
+      },
+      "oscillator": {
+        "model": "dco",
+        "octave": 0,
+        "pulse_shape": 3,
+        "pulse_width": 40,
+        "saw_shape": 1,
+        "sub_shape": 0,
+        "sub_volume": 25,
+        "noise_volume": 4
+      },
+      "filter": {
+        "model": "multimode",
+        "mode": "lp2",
+        "cutoff": 68,
+        "resonance": 10,
+        "key_follow": 50
+      },
+      "env1": {
+        "model": "digital",
+        "attack": 0,
+        "decay": 55,
+        "sustain": 30,
+        "release": 40,
+        "velocity": 40,
+        "curve": true
+      },
+      "env2": {
+        "model": "digital",
+        "attack": 0,
+        "decay": 40,
+        "sustain": 10,
+        "release": 35,
+        "velocity": 50,
+        "curve": true
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 25
+        },
+        "cutoff_2": {
+          "source": "Velocity",
+          "amount": 10
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 12
+      },
+      "trimmers": {
+        "drift": 30,
+        "envelope_variance": 10
+      },
+      "fx1": {
+        "type": "chorus",
+        "variant": "classic",
+        "rate": 28,
+        "depth": 45,
+        "wet": 60
+      },
+      "fx2": {
+        "type": "plate",
+        "predelay": 10,
+        "diffusion": 85,
+        "damp": 85,
+        "decay": 50,
+        "size": 120,
+        "dry": 90,
+        "wet": 24
+      },
+      "amp": {
+        "output": 78,
+        "volume": 42,
+        "vca": "env1"
+      }
+    },
+    {
+      "meta": {
+        "name": "SQ Dub Chord Stab",
+        "author": "PLUIT / diva-mcp",
+        "description": "Dub-techno minor chord stab: three VCOs tuned root / minor third / fifth, short filter snap, long damped echo.",
+        "usage": "One key = one minor chord. Play off-beats.",
+        "categories": [
+          "Sequences"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Dark",
+          "Spacey",
+          "Dubby"
+        ]
+      },
+      "concept": {
+        "intent": "The classic dub-techno chord stab: one key, a dark minor chord echoing into space.",
+        "spectral": "Triple VCO saws at 0, +3 and +7 semitones (minor triad).",
+        "temporal": "Short decay, no sustain.",
+        "filtering": "Cascade low cutoff, Env2 snap.",
+        "space": "Delay 3/6/9 sixteenths, feedback 55, LP 45, wow 25 -> plate.",
+        "architecture": "Triple VCO: three oscillators = a full triad from one key."
+      },
+      "oscillator": {
+        "model": "triple_vco",
+        "osc1": {
+          "octave": 0,
+          "shape": 5,
+          "volume": 70
+        },
+        "osc2": {
+          "semitones": 3,
+          "shape": 5,
+          "volume": 60
+        },
+        "osc3": {
+          "semitones": 7,
+          "shape": 5,
+          "volume": 60
+        },
+        "noise": {
+          "volume": 0
+        },
+        "feedback": 0,
+        "fm": 0,
+        "tune_mod_targets": [],
+        "shape_mod_targets": []
+      },
+      "filter": {
+        "model": "cascade",
+        "cutoff": 62,
+        "resonance": 18,
+        "key_follow": 40,
+        "slope": "24db",
+        "character": "clean"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 30,
+        "sustain": 0,
+        "release": 30,
+        "velocity": 35
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 24,
+        "sustain": 0,
+        "release": 20,
+        "velocity": 30
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 30
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "fx1": {
+        "type": "delay",
+        "left": 3,
+        "center": 6,
+        "right": 9,
+        "side_vol": 40,
+        "center_vol": 20,
+        "feedback": 55,
+        "hp": 35,
+        "lp": 45,
+        "dry": 100,
+        "wow": 25
+      },
+      "fx2": {
+        "type": "plate",
+        "predelay": 20,
+        "diffusion": 90,
+        "damp": 82,
+        "decay": 55,
+        "size": 150,
+        "dry": 90,
+        "wet": 22
+      },
+      "amp": {
+        "output": 70,
+        "volume": 38,
+        "vca": "env1"
+      }
+    },
+    {
+      "meta": {
+        "name": "SQ Minimal Blip",
+        "author": "PLUIT / diva-mcp",
+        "description": "Minimal techno blip: short digital pulse through a band-pass Uhbie, random per-note filter variation, ping-pong echo.",
+        "usage": "Sequence 16ths; each note varies slightly (Random -> cutoff).",
+        "categories": [
+          "Sequences"
+        ],
+        "features": [
+          "Poly",
+          "Stereo",
+          "Percussive"
+        ],
+        "character": [
+          "Bright",
+          "Plucky"
+        ]
+      },
+      "concept": {
+        "intent": "A tiny, constantly varying blip for hypnotic minimal sequences.",
+        "spectral": "Digital pulse wave.",
+        "temporal": "Very short envelopes.",
+        "filtering": "Uhbie at the band-pass centre, resonance 35.",
+        "modulation": "Env2 -> cutoff; Random -> cutoff mod 2 (per-note micro-variation).",
+        "space": "Short multi-tap delay.",
+        "architecture": "Digital + Uhbie: crisp source, silky band-pass."
+      },
+      "oscillator": {
+        "model": "digital",
+        "osc1": {
+          "octave": 0,
+          "wave": "pulse"
+        },
+        "osc2": {
+          "semitones": 12,
+          "wave": "pulse"
+        },
+        "pulse_width": 30,
+        "mix": 0,
+        "high_quality": true
+      },
+      "filter": {
+        "model": "uhbie",
+        "cutoff": 85,
+        "resonance": 35,
+        "key_follow": 50,
+        "uhbie_mix": 45,
+        "uhbie_center": "bandpass"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 14,
+        "sustain": 0,
+        "release": 12,
+        "velocity": 40
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 0,
+        "decay": 10,
+        "sustain": 0,
+        "release": 8,
+        "velocity": 30
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 35
+        },
+        "cutoff_2": {
+          "source": "Random",
+          "amount": 12
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "fx1": {
+        "type": "delay",
+        "left": 2,
+        "center": 3,
+        "right": 4,
+        "side_vol": 30,
+        "center_vol": 10,
+        "feedback": 35,
+        "hp": 30,
+        "lp": 60,
+        "dry": 100,
+        "wow": 10
+      },
+      "amp": {
+        "output": 78,
+        "volume": 42,
+        "vca": "env1"
+      },
+      "fx2": {
+        "type": "off"
+      }
+    },
+    {
+      "meta": {
+        "name": "FX Dub Space",
+        "author": "PLUIT / diva-mcp",
+        "description": "Evolving dub atmosphere: detuned saws and noise, slowly wandering resonant filter, long tape echo and plate.",
+        "usage": "Hold a note or chord and let it evolve.",
+        "categories": [
+          "FX"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Dark",
+          "Moving",
+          "Spacey"
+        ]
+      },
+      "concept": {
+        "intent": "A slowly breathing dub-techno space to sit behind the groove.",
+        "spectral": "Dual VCO saws (+12 cents) plus VCO1 noise.",
+        "temporal": "Slow swell, long release.",
+        "filtering": "Cascade with resonance 35; LFO2 random-glide moves the cutoff slowly.",
+        "modulation": "LFO2 (random glide, slow) -> cutoff mod 2 (+25); drift 60.",
+        "space": "Delay feedback 58, LP 40, wow 50 -> plate.",
+        "architecture": "Dual VCO + Cascade, like Analog Memories, pushed into texture."
+      },
+      "oscillator": {
+        "model": "dual_vco",
+        "osc1": {
+          "octave": 0,
+          "saw": true,
+          "noise": true,
+          "pulse": false,
+          "triangle": false
+        },
+        "osc2": {
+          "semitones": 0.12,
+          "saw": true,
+          "sine": false,
+          "triangle": false,
+          "pulse": false
+        },
+        "mix": 50
+      },
+      "hpf": {
+        "model": "pre",
+        "frequency": 45
+      },
+      "filter": {
+        "model": "cascade",
+        "cutoff": 60,
+        "resonance": 35,
+        "key_follow": 30,
+        "slope": "24db",
+        "character": "clean"
+      },
+      "env1": {
+        "model": "analogue",
+        "attack": 70,
+        "decay": 80,
+        "sustain": 100,
+        "release": 75,
+        "velocity": 10
+      },
+      "env2": {
+        "model": "analogue",
+        "attack": 70,
+        "decay": 80,
+        "sustain": 60,
+        "release": 70,
+        "velocity": 0
+      },
+      "lfo2": {
+        "waveform": "random_glide",
+        "restart": "random",
+        "sync_raw": -2,
+        "rate": -2.5,
+        "depth": 100,
+        "depth_source": "none"
+      },
+      "modulation": {
+        "cutoff_1": {
+          "source": "Env2",
+          "amount": 10
+        },
+        "cutoff_2": {
+          "source": "LFO2",
+          "amount": 25
+        }
+      },
+      "voice": {
+        "mode": "poly",
+        "voices": 8
+      },
+      "trimmers": {
+        "drift": 60
+      },
+      "fx1": {
+        "type": "delay",
+        "left": 4,
+        "center": 6,
+        "right": 8,
+        "side_vol": 35,
+        "center_vol": 15,
+        "feedback": 58,
+        "hp": 30,
+        "lp": 40,
+        "dry": 100,
+        "wow": 50
+      },
+      "fx2": {
+        "type": "plate",
+        "predelay": 30,
+        "diffusion": 95,
+        "damp": 80,
+        "decay": 75,
+        "size": 185,
+        "dry": 88,
+        "wet": 35
+      },
+      "amp": {
+        "output": 72,
+        "volume": 40,
+        "vca": "env1"
+      }
+    }
+  ]
+}

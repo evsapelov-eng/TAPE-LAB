@@ -70,7 +70,15 @@ How diva-mcp turns a musical description into a Diva patch. The same knowledge i
 - **Movement:** `lfo1.waveform = random_glide`, `modulation.vibrato` ~4 (pitch wander); `trimmers.drift` ~70; LFO2 slow → cutoff_2 +6.
 - **Space:** chorus classic wet ~70 → delay with `wow` ~55 and `lp` ~55 or a dark plate.
 
-## 6. Rules diva-mcp enforces
+## 6. Gain staging (output level standard)
+
+- Default: **Output (`amp.output`) 80, VCA (`amp.volume`) 42**. Real Diva presets: median Output 92, VCA 42.
+- Lower (Output 70–76, VCA 38–40) for high resonance (especially Bite), loud Triple VCO mixes (keep Vol1+Vol2+Vol3+Noise ≤ ~190), feedback, long delay feedback, three-VCO chords.
+- VCA above ~55 overdrives the amplifier — only on purpose.
+- `level_check` in each result rates the risk; it is a parameter heuristic, not a measurement.
+- Background: VOL. 01 v1.0 at Output 100 / VCA 50–55 sounded "a bit loud, sometimes clipping".
+
+## 7. Rules diva-mcp enforces
 
 - Only existing controls: model-specific fields are rejected for other models.
 - Only existing modulation slots (no matrix).

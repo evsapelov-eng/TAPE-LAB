@@ -92,7 +92,7 @@ function src(id: string, module: string, label: string, extra: Partial<Curated> 
 }
 
 // ---------------------------------------------------------------- HEAD / main
-add('main/CcOp', { label: 'Output (main volume)', module: 'Main', init: 100, confidence: 'high', sources: ['vst', 'observed'], unit: '0..200 (100 = nominal; observed factory-like values 16..180)' });
+add('main/CcOp', { label: 'Output (main volume)', module: 'Main', init: 80, confidence: 'high', sources: ['vst', 'observed'], unit: '0..200; real presets: median 92 (Diva 16519 patches 60..92). diva-mcp default 80 for headroom', notes: 'Gain curve (dB per step) is undocumented.' });
 add('main/#FX1', { label: 'FX1 active', module: 'Effects', enum: { '0': 'off', '1': 'on' }, enumConfidence: 'high', init: 0, confidence: 'high', sources: ['vst', 'manual'] });
 add('main/#FX2', { label: 'FX2 active', module: 'Effects', enum: { '0': 'off', '1': 'on' }, enumConfidence: 'high', init: 0, confidence: 'high', sources: ['vst', 'manual'] });
 
@@ -307,7 +307,7 @@ add('VCF1/BpUbie', { label: 'Uhbie BR/BP switch', module: F, enum: { '0': 'band-
 // ---------------------------------------------------------------- VCA
 const A = 'Amplifier';
 add('VCA1/Pan', { label: 'Pan', module: A, init: 0, confidence: 'high', sources: ['vst', 'manual'] });
-add('VCA1/Vol', { label: 'Volume (VCA gain)', module: A, init: 50, confidence: 'high', sources: ['vst', 'manual'], notes: 'Positive/high values can subtly overdrive the amplifier.' });
+add('VCA1/Vol', { label: 'Volume (VCA gain)', module: A, init: 42, confidence: 'high', sources: ['vst', 'manual', 'observed'], notes: 'High values can subtly overdrive the amplifier (manual). Real presets: median 42, most common 50.' });
 add('VCA1/VCA', { label: 'VCA source', module: A, enum: { '0': 'Gate', '1': 'Env1' }, enumConfidence: 'medium', init: 1, confidence: 'medium', sources: ['vst', 'manual', 'synthproxy'] });
 src('VCA1/ModSrc', A, 'Vol Mod source', { init: 0 });
 add('VCA1/ModDpt', { label: 'Vol Mod amount', module: A, init: 0, confidence: 'high', sources: ['vst', 'manual'] });

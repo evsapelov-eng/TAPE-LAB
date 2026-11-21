@@ -16,6 +16,7 @@ export const WORKFLOW = [
   '6. Modulation: only Diva\'s fixed slots exist (see list_parameters().modulation_slots). Prefer few, deliberate routes.',
   '7. Dynamics: velocity on env levels / cutoff, mod wheel and aftertouch routes for expression.',
   '8. Space: FX1 -> FX2 in series (chorus/phaser/plate/delay/rotary). Keep wet levels musical.',
+  '8b. Gain staging: set amp.output / amp.volume per the gain_staging rules (standard 80 / 42).',
   '9. Build the PresetSpec (only confirmed fields), call generate_preset, then describe_preset to sanity-check, and tell the user to load it in Diva.',
 ];
 
@@ -35,6 +36,14 @@ export const ARCHITECTURES = {
     uhbie: 'Oberheim SEM-style 2-pole SVF, LP -> notch/BP -> HP crossfade. Silky, vocal, hollow.',
   },
 };
+
+export const GAIN_STAGING = [
+  'Level standard: amp.output (main/CcOp) 80 and amp.volume (VCA1/Vol) 42. Real Diva presets: median Output 92, VCA 42.',
+  'Go lower (Output 70-76, VCA 38-40) for: high resonance (esp. Bite), Triple VCO with 2-3 loud oscillators, mixer/HPF feedback, long delay feedback, dense chords from three VCOs.',
+  'Keep Triple VCO mixer sum (Vol1+Vol2+Vol3+Noise) <= ~190 unless drive is intended.',
+  'VCA above ~55 overdrives the amplifier (manual) - use it only deliberately.',
+  'Check level_check in the generate/validate result; it is a heuristic, not a loudness measurement. User feedback on PLUIT VOL. 01 (Output 100 / VCA 50-55) was "a bit too loud, occasionally clipping".',
+];
 
 export const ARCHETYPES: Record<string, { architecture: string; envelope: string; filter: string; modulation: string; fx: string }> = {
   warm_pad: {
@@ -57,6 +66,20 @@ export const ARCHETYPES: Record<string, { architecture: string; envelope: string
     filter: 'cutoff 70-95, resonance 0-15, env2 moderate (decay 40-55) +15..+35, velocity -> cutoff',
     modulation: 'subtle LFO2 -> pan or VCA tremolo (5-15) for EP flavour',
     fx: 'chorus or phaser -> plate',
+  },
+  percussion: {
+    architecture: 'triple_vco (tune-mod switches, noise colour, mixer) or dual_vco/digital + multimode BP/HP, ladder for pings',
+    envelope: 'env1 attack 0, decay 7-35, sustain 0, release ~= decay; env2 shorter than env1',
+    filter: 'tom: ladder 70-85 low res; rim/clave: multimode BP or uhbie BP, res 30-45; hat: multimode HP 110-125; ping: ladder res 85-92 key_follow 100 with low osc level',
+    modulation: 'Env2 -> pitch_1 (Triple VCO, tune_mod_targets) for tom drops (depth unit unconfirmed: 8-16); Env2 -> cutoff short',
+    fx: 'dry, or a tiny plate / short dub delay',
+  },
+  minimal_techno: {
+    architecture: 'triple_vco minor-triad stab (0/+3/+7), digital pulse blips into uhbie BP, dual_vco + cascade textures',
+    envelope: 'short stabs (decay 20-30, sustain 0) or slow swells for textures',
+    filter: 'low cutoff 55-70 with short env2 snap; band-pass for blips',
+    modulation: 'Random -> cutoff_2 for per-note micro-variation; slow random-glide LFO2 -> cutoff for evolving textures',
+    fx: 'dub delay 3/6/9 sixteenths, feedback 45-58, LP 40-50, wow 20-50, then plate',
   },
   pluck: {
     architecture: 'digital (triangle/pulse), dual_vco, dco + uhbie/multimode/cascade',
@@ -98,6 +121,7 @@ export function soundDesignGuide(topic?: string) {
     architectures: ARCHITECTURES,
     archetypes: pick(ARCHETYPES),
     lexicon: pick(LEXICON),
+    gain_staging: GAIN_STAGING,
     caveats: [
       'All numbers are starting points on Diva raw scales (0..100 knobs, cutoff 30..150). They are heuristics, not measurements.',
       'Do not claim a preset sounds a certain way: no audio is rendered. Describe intent and parameter-derived character.',
