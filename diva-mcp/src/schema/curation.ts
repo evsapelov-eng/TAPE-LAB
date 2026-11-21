@@ -106,11 +106,11 @@ add('MPE/Status', { label: 'MPE status', module: 'Global', confidence: 'unknown'
 
 // ---------------------------------------------------------------- CLK / ARP
 add('CLK/Mult', { label: 'Clock Multiply', module: 'Arpeggiator', init: 100, unit: '50..200 (%; manual: 0.50..2.00)', confidence: 'high', sources: ['vst', 'manual'] });
-add('CLK/Base', { label: 'Clock TimeBase', module: 'Arpeggiator', init: 2, confidence: 'medium', sources: ['vst', 'observed'], notes: '4 positions; mapping to note values unconfirmed.' });
+add('CLK/Base', { label: 'Clock TimeBase', module: 'Arpeggiator', init: 2, confidence: 'low', sources: ['vst', 'observed'], notes: '4 positions; mapping to note values unconfirmed. 2 is used by Diva-saved files and most arp presets, 1 by some arp presets (presumably a slower/faster base).' });
 add('CLK/Swing', { label: 'Clock Swing', module: 'Arpeggiator', init: 0, confidence: 'high', sources: ['vst', 'manual'] });
 add('CLK/Strict', { label: 'Arp Sync (strict host sync)', module: 'Arpeggiator', enum: { '0': 'off', '1': 'on' }, enumConfidence: 'medium', init: 1, confidence: 'medium', sources: ['manual', 'observed'] });
 add('ARP/Dir', { label: 'Arp Mode / Direction', module: 'Arpeggiator', enum: enumOf(['played', 'up', 'down', 'up+dn 1', 'up+dn 2', 'random']), enumConfidence: 'medium', init: 1, confidence: 'high', sources: ['vst', 'manual'] });
-add('ARP/Oct', { label: 'Arp Octaves', module: 'Arpeggiator', enum: enumOf([1, 2, 3, 4]), enumConfidence: 'medium', init: 0, confidence: 'medium', sources: ['vst', 'manual'], notes: 'Raw 0..3 = 1..4 octaves (manual: 1 to 4). Observed raw values 1..3.' });
+add('ARP/Oct', { label: 'Arp Octaves', module: 'Arpeggiator', init: 1, confidence: 'low', sources: ['vst', 'manual', 'observed'], notes: 'Raw value. Manual: 1 to 4 octaves. Every real preset stores 1..3 (1 in Diva-saved files with arp off), never 0, so raw 1 presumably = 1 octave; mapping of 0 and 3 unconfirmed.' });
 add('ARP/CDiv', { label: 'Arp Multiply', module: 'Arpeggiator', init: 0, confidence: 'low', sources: ['vst'] });
 add('ARP/Rstrt', { label: 'Arp Restart', module: 'Arpeggiator', init: 0, confidence: 'medium', sources: ['vst', 'manual'], notes: '13 positions: none, 4-10, 12, 14, 16, 24, 32 (manual); raw 0 = none presumed.' });
 add('ARP/OnOff', { label: 'Arp On/Off', module: 'Arpeggiator', enum: { '0': 'off', '1': 'on' }, enumConfidence: 'high', init: 0, confidence: 'high', sources: ['vst', 'manual'] });

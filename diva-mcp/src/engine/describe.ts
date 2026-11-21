@@ -103,6 +103,7 @@ export function describeAnalysis(a: Analysis) {
   lines.push(movement.length ? `Movement: ${movement.join('; ')}.` : 'Movement: essentially static (no LFO/random routes).');
   if (expressive.length) lines.push(`Performance control: ${expressive.join('; ')}.`);
   lines.push(fx.length ? `Effects: ${fx.join(' -> ')}.` : 'Effects: none (dry).');
+  if (a.arpeggiator.enabled) lines.push(`Arpeggiator: ${a.arpeggiator.mode}, progression ${a.arpeggiator.progression}${a.arpeggiator.swing ? `, swing ${a.arpeggiator.swing}` : ''} (host-synced).`);
   lines.push(`Voicing: ${voice.mode}, ${voice.voices} voices${voice.glide > 0 ? `, glide ${voice.glide}` : ''}.`);
   lines.push(`Likely use: ${role}.`);
 
@@ -144,6 +145,10 @@ function guessRole(a: Analysis, articulation: string, brightness: string): strin
   if (/^PD|pad/.test(name) || cat.includes('pad')) return 'pad / harmonic bed';
   if (/^LD|lead/.test(name) || cat.includes('lead')) return 'lead / melody';
   if (/^PL|pluck/.test(name) || cat.includes('pluck')) return 'pluck / arpeggio';
+  if (/^ARP/.test(name) || a.arpeggiator.enabled) return 'rhythmic arpeggio (hold chords)';
+  if (/^SQ/.test(name) || cat.includes('sequence')) return 'sequence / stab';
+  if (/^PRC/.test(name) || cat.includes('drum') || cat.includes('perc')) return 'percussion';
+  if (/^FX/.test(name) || cat === 'fx') return 'effect / transition';
   if (/^KY|key/.test(name) || cat.includes('key')) return 'keys / chords';
   const mono = ['mono', 'legato'].includes(String(a.voice.mode));
   const tr = Number(a.voice.transpose) + parseFloat(String((a.oscillator as any).osc1?.tune ?? (a.oscillator as any).vco1?.tune ?? (a.oscillator as any).tune ?? '0'));

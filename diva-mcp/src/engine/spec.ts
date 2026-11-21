@@ -243,6 +243,21 @@ export const TrimmersZ = z
   })
   .strict();
 
+export const ArpZ = z
+  .object({
+    enabled: z.boolean().optional(),
+    mode: z.enum(['played', 'up', 'down', 'up_down_1', 'up_down_2', 'random']).optional().describe('Arp mode (manual order)'),
+    progression: z.enum(['serial', 'round', 'leap', 'repeat']).optional().describe('When the arp moves to the next octave'),
+    octaves_raw: z.number().int().min(0).max(3).optional().describe('LOW CONFIDENCE raw octave value; real presets use 1 (presumably 1 octave), 2, 3'),
+    restart_raw: z.number().int().min(0).max(12).optional().describe('Raw restart position: 0 = none, then 4..10, 12, 14, 16, 24, 32 notes (manual order)'),
+    clock_base_raw: z.number().int().min(0).max(3).optional().describe('LOW CONFIDENCE raw clock time base; 2 = value used by Diva-saved files'),
+    clock_multiply: z.number().min(50).max(200).optional().describe('Clock interval scale in %: 50 = twice as fast, 200 = half speed (manual: 0.50..2.00)'),
+    swing: knob.optional().describe('Clock swing: 50 = 2:1 triplet feel, 100 = 3:1 (manual)'),
+    strict_sync: z.boolean().optional().describe('Align arp with host beats'),
+  })
+  .strict()
+  .describe('Diva arpeggiator; its clock is always synced to host tempo (manual).');
+
 export const AmpZ = z
   .object({
     volume: knob.optional(),
@@ -291,6 +306,7 @@ export const PresetSpecZ = z
     voice: VoiceZ.optional(),
     trimmers: TrimmersZ.optional(),
     amp: AmpZ.optional(),
+    arp: ArpZ.optional(),
     fx1: z.union([EffectZ, EffectOffZ]).optional(),
     fx2: z.union([EffectZ, EffectOffZ]).optional(),
   })

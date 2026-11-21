@@ -6,7 +6,7 @@ Date: 2026-11-21 · Environment: Linux container, Node.js 22.23, Claude Code CLI
 
 | Level | Result |
 |---|---|
-| Automated tests (`npm test`) | **72 / 72 passed** (6 files) |
+| Automated tests (`npm test`) | **74 / 74 passed** (6 files) |
 | Extended corpus run (`DIVA_TEST_PRESETS_DIR` = 55 real presets) | **124 / 124 passed** |
 | Structural validation of all 55 reference presets (`cli validate`) | **55 / 55 passed** |
 | Claude Code integration | **passed** — `claude mcp get diva-mcp` → `✓ Connected`; a headless `claude -p` session called `get_library_info`, `generate_preset`, `validate_preset` and received a valid preset |
@@ -97,3 +97,21 @@ The metadata uses the ASCII name "PLUIT - DIVA LAB VOL. 01" (hyphen instead of e
 | Minimal techno | SQ Dub Chord Stab, SQ Minimal Blip, FX Dub Space |
 
 New unconfirmed point: the depth unit of tune modulation (`OSC/TM1Dpt`), used for the pitch drop of PRC Analog Tom, so the size of the drop must be judged by ear.
+
+## Update 3 — arpeggiator support, MINIMAL ANALOG VOL. 01 v1.1 (30 presets)
+
+**Arpeggiator:** `PresetSpec.arp` (on/off, mode, progression, octaves_raw, restart_raw, clock_base_raw, clock multiply, swing, strict sync) mapped to `ARP/*` and `CLK/*`; shown in `analyze_preset` / `describe_preset`. Diva's arp clock always follows host tempo (manual).
+Template fix: `ARP/Oct` was 0 in the init template, a value no real preset contains (all store 1–3). It is now 1. Arp was off in all earlier presets, so this changes nothing audible.
+Low confidence: octave count of `ARP/Oct` values other than 1, note value of `CLK/Base` positions (all arps use the observed default 2).
+
+**New presets (14):**
+
+| Group | Presets |
+|---|---|
+| Spatial pads | PD Wide Horizon, PD Glass Cathedral, PD Organic Breath, PD Deep Ocean |
+| Rhythmic arps (minimal / organic house) | ARP Minimal Pulse, ARP Organic Kalimba, ARP Dub Steps, ARP Acid Bubble, ARP Marimba Groove |
+| Reese / power bass | BS Reese Classic, BS Reese Wide, BS Reese Growl, BS Organic Thump |
+| Riser | FX Tape Riser |
+
+30/30 created, structural validation passed, all level risk "low" (Output 68–78 / VCA 36–42). The 16 earlier presets are unchanged except `ARP/Oct` 0 → 1. Specs: `banks/specs/pluit-minimal-analog-vol-01.json` (+ `add_minimal_v1_1.py`).
+To check by ear: arp speed (clock base), ARP Dub Steps octave span (raw 2), riser length and pitch range (env attack times and tune-mod depth units are undocumented).

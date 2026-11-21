@@ -363,6 +363,22 @@ export function mapSpec(spec: PresetSpec, base: ModelContext): MappingResult {
     set('main/CcOp', a.output, 'main output');
   }
 
+  // ------------------------------------------------------------ arpeggiator
+  const ar = spec.arp;
+  if (ar) {
+    set('ARP/OnOff', ar.enabled, 'arp on/off');
+    set('ARP/Dir', ar.mode === undefined ? undefined : ['played', 'up', 'down', 'up_down_1', 'up_down_2', 'random'].indexOf(ar.mode), `arp mode ${ar.mode ?? ''}`);
+    set('ARP/Order', ar.progression === undefined ? undefined : ['serial', 'round', 'leap', 'repeat'].indexOf(ar.progression), 'arp progression');
+    set('ARP/Oct', ar.octaves_raw, 'arp octaves (raw)');
+    set('ARP/Rstrt', ar.restart_raw, 'arp restart (raw)');
+    set('CLK/Base', ar.clock_base_raw, 'clock time base (raw)');
+    set('CLK/Mult', ar.clock_multiply, 'clock multiply');
+    set('CLK/Swing', ar.swing, 'clock swing');
+    set('CLK/Strict', ar.strict_sync, 'arp strict host sync');
+    if (ar.octaves_raw !== undefined && ar.octaves_raw !== 1) warnings.push('arp.octaves_raw: only raw 1 is confirmed as the common value; the octave count of other values is unconfirmed');
+    if (ar.clock_base_raw !== undefined && ar.clock_base_raw !== 2) warnings.push('arp.clock_base_raw: note value of this time base is unconfirmed — check the arp speed in Diva');
+  }
+
   // ------------------------------------------------------------ effects
   for (const slotNo of [1, 2] as const) {
     const fx = spec[`fx${slotNo}`];

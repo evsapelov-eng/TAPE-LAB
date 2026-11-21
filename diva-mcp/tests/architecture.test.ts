@@ -106,3 +106,22 @@ describe('Test 4 — compatibility rules (no invented routes or controls)', () =
     expect(r.validation.structural_validation.checks.find((c) => c.name.startsWith('modulation source'))!.status).toBe('passed');
   });
 });
+
+describe('Arpeggiator mapping', () => {
+  it('maps arp settings to ARP/CLK parameters', () => {
+    const r = buildPreset({ arp: { enabled: true, mode: 'up_down_1', progression: 'leap', octaves_raw: 1, swing: 35, clock_multiply: 50, strict_sync: true } });
+    const m = paramMap(r.doc);
+    expect(m.get('ARP/OnOff')).toBe('1');
+    expect(m.get('ARP/Dir')).toBe('3');
+    expect(m.get('ARP/Order')).toBe('2');
+    expect(m.get('ARP/Oct')).toBe('1');
+    expect(m.get('CLK/Swing')).toBe('35.00');
+    expect(m.get('CLK/Mult')).toBe('50.00');
+    expect(r.warnings).toEqual([]);
+    expect(analyzeDocument(r.doc).arpeggiator).toMatchObject({ enabled: true, mode: 'up+dn 1', swing: 35 });
+  });
+  it('warns on unconfirmed raw arp values and keeps the observed default octave value', () => {
+    expect(buildPreset({ arp: { octaves_raw: 3 } }).warnings.join(' ')).toMatch(/octaves_raw/);
+    expect(paramMap(buildPreset({}).doc).get('ARP/Oct')).toBe('1');
+  });
+});

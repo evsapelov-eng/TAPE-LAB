@@ -1241,12 +1241,12 @@
    },
    "global": false,
    "unit": null,
-   "confidence": "medium",
+   "confidence": "low",
    "sources": [
     "vst",
     "observed"
    ],
-   "notes": "4 positions; mapping to note values unconfirmed.",
+   "notes": "4 positions; mapping to note values unconfirmed. 2 is used by Diva-saved files and most arp presets, 1 by some arp presets (presumably a slower/faster base).",
    "observed": {
     "count": 55,
     "min": 1,
@@ -1403,14 +1403,9 @@
    "min": 0,
    "max": 3,
    "range_source": "deepdiva VST mapping",
-   "enum": {
-    "0": "1",
-    "1": "2",
-    "2": "3",
-    "3": "4"
-   },
-   "enum_confidence": "medium",
-   "default": 0,
+   "enum": null,
+   "enum_confidence": null,
+   "default": 1,
    "default_note": "diva-mcp init template value (not a confirmed factory default)",
    "compatibility": {
     "oscillator_models": null,
@@ -1420,12 +1415,13 @@
    },
    "global": false,
    "unit": null,
-   "confidence": "medium",
+   "confidence": "low",
    "sources": [
     "vst",
-    "manual"
+    "manual",
+    "observed"
    ],
-   "notes": "Raw 0..3 = 1..4 octaves (manual: 1 to 4). Observed raw values 1..3.",
+   "notes": "Raw value. Manual: 1 to 4 octaves. Every real preset stores 1..3 (1 in Diva-saved files with arp off), never 0, so raw 1 presumably = 1 octave; mapping of 0 and 3 unconfirmed.",
    "observed": {
     "count": 55,
     "min": 1,

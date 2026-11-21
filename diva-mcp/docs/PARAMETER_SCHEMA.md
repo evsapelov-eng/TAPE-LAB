@@ -17,7 +17,7 @@
 
 Ranges come from maudgrol/deepdiva's VST mapping unless noted, and are widened (with a warning) when real presets exceed them.
 
-**Confidence:** unknown: 45, high: 229, medium: 63, low: 32 (total 369 parameters).
+**Confidence:** unknown: 45, high: 229, medium: 61, low: 34 (total 369 parameters).
 
 - **high** — Name from the official VST parameter list AND behaviour/range consistent with the manual and observed presets.
 - **medium** — Two independent sources agree, or one authoritative source plus consistent observations.
@@ -130,11 +130,11 @@ Ranges come from maudgrol/deepdiva's VST mapping unless noted, and are widened (
 | ID | Label | VST name | Type | Range | Enum | Default (init) | Active for | Confidence | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 | `CLK/Mult` | Clock Multiply | CLK: Multiply | float | 50 .. 200 |  | 100 | all | high | 50..200 (%; manual: 0.50..2.00); observed 100..100 (n=55) |
-| `CLK/Base` | Clock TimeBase | CLK: TimeBase | int | 0 .. 3 |  | 2 | all | medium | 4 positions; mapping to note values unconfirmed.; observed 1..3 (n=55) |
+| `CLK/Base` | Clock TimeBase | CLK: TimeBase | int | 0 .. 3 |  | 2 | all | low | 4 positions; mapping to note values unconfirmed. 2 is used by Diva-saved files and most arp presets, 1 by some arp presets (presumably a slower/faster base).; observed 1..3 (n=55) |
 | `CLK/Swing` | Clock Swing | CLK: Swing | float | 0 .. 100 |  | 0 | all | high | observed 0..30 (n=55) |
 | `CLK/Strict` | Arp Sync (strict host sync) | unknown | int | 0 .. 1 | 0=off, 1=on _(medium)_ | 1 | all | medium | observed 0..1 (n=55) |
 | `ARP/Dir` | Arp Mode / Direction | ARP: Direction | int | 0 .. 5 | 0=played, 1=up, 2=down, 3=up+dn 1, 4=up+dn 2, 5=random _(medium)_ | 1 | all | high | observed 0..5 (n=55) |
-| `ARP/Oct` | Arp Octaves | ARP: Octaves | int | 0 .. 3 | 0=1, 1=2, 2=3, 3=4 _(medium)_ | 0 | all | medium | Raw 0..3 = 1..4 octaves (manual: 1 to 4). Observed raw values 1..3.; observed 1..3 (n=55) |
+| `ARP/Oct` | Arp Octaves | ARP: Octaves | int | 0 .. 3 |  | 1 | all | low | Raw value. Manual: 1 to 4 octaves. Every real preset stores 1..3 (1 in Diva-saved files with arp off), never 0, so raw 1 presumably = 1 octave; mapping of 0 and 3 unconfirmed.; observed 1..3 (n=55) |
 | `ARP/CDiv` | Arp Multiply | ARP: Multiply | int | 0 .. 0 |  | 0 | all | low | observed 0..0 (n=55) |
 | `ARP/Rstrt` | Arp Restart | ARP: Restart | int | 0 .. 12 |  | 0 | all | medium | 13 positions: none, 4-10, 12, 14, 16, 24, 32 (manual); raw 0 = none presumed.; observed 0..1 (n=55) |
 | `ARP/OnOff` | Arp On/Off | ARP: OnOff | int | 0 .. 1 | 0=off, 1=on _(high)_ | 0 | all | high | observed 0..1 (n=55) |

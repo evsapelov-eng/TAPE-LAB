@@ -187,6 +187,16 @@ export function analyzeDocument(doc: H2PDocument, file?: string) {
     envelope_variance: n('OPT/ESlop'),
     voice_detune_nonzero: [1, 2, 3].map((o) => [1, 2, 3, 4, 5, 6, 7, 8].filter((v) => n(`OPT/V${v}T${o}`) !== 0).length),
   };
+  const arpeggiator = {
+    enabled: n('ARP/OnOff') === 1,
+    mode: enumLabel('ARP/Dir', n('ARP/Dir')),
+    progression: enumLabel('ARP/Order', n('ARP/Order')),
+    octaves_raw: n('ARP/Oct'),
+    restart_raw: n('ARP/Rstrt'),
+    clock_base_raw: n('CLK/Base'),
+    clock_multiply: n('CLK/Mult'),
+    swing: n('CLK/Swing'),
+  };
   const amp = { volume: n('VCA1/Vol'), pan: n('VCA1/Pan'), vca: enumLabel('VCA1/VCA', n('VCA1/VCA')), output: n('main/CcOp') };
 
   const unknown = paramLines(doc)
@@ -205,6 +215,7 @@ export function analyzeDocument(doc: H2PDocument, file?: string) {
     modulations: { routes, fixed, processors },
     effects,
     voice,
+    arpeggiator,
     amp,
     trimmers,
     unknown_parameters: unknown,
