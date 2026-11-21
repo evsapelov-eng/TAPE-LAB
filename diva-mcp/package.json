@@ -1,0 +1,41 @@
+{
+  "name": "diva-mcp",
+  "version": "0.1.0",
+  "description": "Local MCP server that lets Claude Code design, edit, analyze and validate u-he Diva (.h2p) presets.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "diva-mcp": "dist/src/cli.js"
+  },
+  "main": "dist/src/mcp/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/mcp/server.js",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build:schema": "tsx scripts/build-schema.ts",
+    "collect:observations": "tsx scripts/collect-observations.ts"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "templates",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "fflate": "^0.8.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}

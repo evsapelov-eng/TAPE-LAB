@@ -1,0 +1,647 @@
+{
+  "bank": "PLUIT - DIVA LAB VOL. 01",
+  "folder": ".",
+  "created": 5,
+  "failed": 0,
+  "presets": [
+    {
+      "index": 0,
+      "ok": true,
+      "name": "PD Analog Memories",
+      "path": "PD Analog Memories.h2p",
+      "architecture": "Dual VCO -> Cascade",
+      "concept": {
+        "intent": "A warm analogue pad that feels like a half-remembered tape recording: soft edges, gentle beating, never perfectly still.",
+        "references": [
+          "Kiasmos",
+          "Boards of Canada (aesthetic only)"
+        ],
+        "spectral": "Two saw waves (Dual VCO) detuned by ~8 cents for slow beating; HPF Pre trims sub mud.",
+        "temporal": "Slow amp attack (48) and long release (58); filter envelope slower than amp so brightness blooms late.",
+        "filtering": "Cascade (smooth 4-pole, clean) at a muted cutoff (74), low resonance, moderate key follow.",
+        "modulation": "Env2 opens the filter slightly; slow LFO2 (random restart) breathes the cutoff; LFO1 random-glide feeds a small vibrato for tape-like wander.",
+        "dynamics": "Light velocity on both envelopes.",
+        "space": "Classic chorus for width, then a darkish plate.",
+        "architecture": "Dual VCO + Cascade: the Jupiter-style VCO pair is the natural pad source, Cascade stays smooth with dense input."
+      },
+      "meta": {
+        "name": "PD Analog Memories",
+        "author": "PLUIT / diva-mcp",
+        "bank": "PLUIT - DIVA LAB VOL. 01",
+        "description": "Warm, slightly unstable analogue pad: two gently detuned saws, slow swell, soft cascade filter and drifting pitch.",
+        "usage": "Velocity: level and a touch of filter opening. Hold chords.",
+        "categories": [
+          "Pads:Analogue"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Warm",
+          "Vintage",
+          "Soft",
+          "Moving"
+        ]
+      },
+      "parameters_set": {
+        "Oscillators": [
+          "Osc 2 tune / detune [OSC/Tune2] = 0.08",
+          "Osc Mix (VCO1 <-> VCO2) [OSC/OscMix] = 45.00"
+        ],
+        "High-pass / Feedback": [
+          "HPF / Feedback model [HPF/Model] = 2",
+          "HPF Frequency [HPF/Freq] = 38.00"
+        ],
+        "Main filter": [
+          "Cutoff [VCF1/Freq] = 74.00",
+          "Resonance / Emphasis / Peak [VCF1/Res] = 12.00",
+          "Key follow (KYBD) [VCF1/KeyScl] = 35.00",
+          "Cutoff mod 1 amount [VCF1/FMDpt] = 18.00",
+          "Cutoff mod 2 amount [VCF1/FM2Dpt] = 6.00"
+        ],
+        "Envelope 1": [
+          "Attack [ENV1/Atk] = 48.00",
+          "Decay [ENV1/Dec] = 60.00",
+          "Sustain [ENV1/Sus] = 85.00",
+          "Release [ENV1/Rel] = 58.00",
+          "Velocity [ENV1/Vel] = 20.00"
+        ],
+        "Envelope 2": [
+          "Attack [ENV2/Atk] = 55.00",
+          "Decay [ENV2/Dec] = 70.00",
+          "Sustain [ENV2/Sus] = 40.00",
+          "Release [ENV2/Rel] = 55.00",
+          "Velocity [ENV2/Vel] = 10.00"
+        ],
+        "LFO 1": [
+          "Waveform [LFO1/Wave] = 7",
+          "Restart [LFO1/Trig] = 3",
+          "Rate (offset from Sync) [LFO1/Rate] = -1.50",
+          "Depth Mod amount [LFO1/DMD1] = 100.00",
+          "Depth Mod source [LFO1/DMS1] = 0"
+        ],
+        "LFO 2": [
+          "Restart [LFO2/Trig] = 3",
+          "Rate (offset from Sync) [LFO2/Rate] = -1.50"
+        ],
+        "Tuning": [
+          "Vibrato (LFO1 -> pitch) [OSC/VtoD] = 4.00"
+        ],
+        "Voice": [
+          "Voices (polyphony) [VCC/Voices] = 5"
+        ],
+        "Trimmers": [
+          "Voice Drift [OSC/Drift] = 70.00",
+          "Detune Amt (voice detune scaling) [OPT/TSlop] = 25.00",
+          "Cutoff variance [OPT/CSlop] = 15.00",
+          "Envelope-rate variance [OPT/ESlop] = 10.00",
+          "Voice 1 detune, osc 1 [OPT/V1T1] = 6.00",
+          "Voice 2 detune, osc 1 [OPT/V2T1] = -4.00",
+          "Voice 3 detune, osc 1 [OPT/V3T1] = 3.00",
+          "Voice 4 detune, osc 1 [OPT/V4T1] = -7.00",
+          "Voice 5 detune, osc 1 [OPT/V5T1] = 5.00",
+          "Voice 6 detune, osc 1 [OPT/V6T1] = -2.00",
+          "Voice 7 detune, osc 1 [OPT/V7T1] = 4.00",
+          "Voice 8 detune, osc 1 [OPT/V8T1] = -5.00",
+          "Voice 1 detune, osc 2 [OPT/V1T2] = -5.00",
+          "Voice 2 detune, osc 2 [OPT/V2T2] = 7.00",
+          "Voice 3 detune, osc 2 [OPT/V3T2] = -3.00",
+          "Voice 4 detune, osc 2 [OPT/V4T2] = 4.00",
+          "Voice 5 detune, osc 2 [OPT/V5T2] = -6.00",
+          "Voice 6 detune, osc 2 [OPT/V6T2] = 2.00",
+          "Voice 7 detune, osc 2 [OPT/V7T2] = -4.00",
+          "Voice 8 detune, osc 2 [OPT/V8T2] = 6.00"
+        ],
+        "Effects": [
+          "FX1 active [main/#FX1] = 1",
+          "FX2 type [FX2/Module] = 'Plate2'",
+          "FX2 active [main/#FX2] = 1"
+        ],
+        "Effects (FX1)": [
+          "Chorus Rate [Chrs1/Rate] = 25.00",
+          "Chorus Depth [Chrs1/Depth] = 55.00",
+          "Chorus Wet [Chrs1/Wet] = 70.00"
+        ],
+        "Effects (FX2)": [
+          "Plate PreDelay [Plate2/Pre] = 20.00",
+          "Plate Diffusion [Plate2/Diff] = 90.00",
+          "Plate Damp [Plate2/Damp] = 75.00",
+          "Plate Decay [Plate2/Decay] = 62.00",
+          "Plate Size [Plate2/Size] = 160.00",
+          "Plate Dry [Plate2/Dry] = 85.00",
+          "Plate Wet [Plate2/Wet] = 32.00"
+        ]
+      },
+      "warnings": [],
+      "validation": {
+        "structural": "passed",
+        "diva_load_test": "not_run",
+        "audio_verification": "not_run",
+        "errors": []
+      },
+      "description": {
+        "summary": "Warm / muted, swelling (pad-like) Dual VCO patch through a Cascade filter with modulation movement, Chorus (Classic) + Plate.",
+        "character_tags": [
+          "analog",
+          "unstable",
+          "warm",
+          "swelling",
+          "moving",
+          "spacious"
+        ],
+        "description": "Synthesis: subtractive, Dual VCO -> Cascade.\nDual VCO (Jupiter-style): VCO1 [saw] +0 st, VCO2 [saw] +0.08 st, mix 45. Detune: vco2 detuned by ~8 cents, per-voice detune (amount 25) -> chorusing/beating. Voice drift 70 introduces analog pitch instability.\nCascade filter, 4-pole 24 dB: cutoff 74 (warm / muted), resonance 12 (smooth). Env2 sweeps cutoff by 18 (peaks around 92) with a slow attack and very slow decay. LFO2 moves cutoff (6). HPF Pre at 38 trims the lows.\nAmp envelope (Analogue): slow attack, sustains at 85, slow release.\nMovement: LFO2 -> Cutoff (mod 2) (6); LFO1 vibrato (4).\nEffects: Chorus (Classic) -> Plate.\nVoicing: poly, 8 voices.\nLikely use: pad / harmonic bed.",
+        "likely_use": "pad / harmonic bed",
+        "basis": "Inferred from parameter values only. The preset was NOT listened to and no audio analysis was performed."
+      }
+    },
+    {
+      "index": 1,
+      "ok": true,
+      "name": "BS Deep Current",
+      "path": "BS Deep Current.h2p",
+      "architecture": "Triple VCO -> Ladder",
+      "concept": {
+        "intent": "A deep, round bass that carries a track: solid fundamental, articulate attack, no fizz.",
+        "spectral": "Triple VCO: saw-ish osc1, slightly detuned square-ish osc2 for body, triangle-ish osc3 one octave down as sub; mixer feedback adds low-end weight.",
+        "temporal": "Instant attack, medium decay to a solid sustain, short release.",
+        "filtering": "Ladder 24 dB at a dark cutoff (52) with moderate resonance; Env2 snaps it open on each note.",
+        "modulation": "Env2 -> cutoff (48), mod wheel -> cutoff (30) for performance.",
+        "dynamics": "Velocity scales the filter envelope more than the amp.",
+        "space": "Dry, both effect slots off.",
+        "architecture": "Triple VCO + Ladder: the classic Minimoog-style bass pairing."
+      },
+      "meta": {
+        "name": "BS Deep Current",
+        "author": "PLUIT / diva-mcp",
+        "bank": "PLUIT - DIVA LAB VOL. 01",
+        "description": "Dense, musical mono bass: three VCOs with a sub-octave, round ladder filter with a punchy envelope.",
+        "usage": "MW = open filter. Velocity = punch.",
+        "categories": [
+          "Bass:Analogue"
+        ],
+        "features": [
+          "Mono",
+          "Dry"
+        ],
+        "character": [
+          "Phat",
+          "Warm",
+          "Dark"
+        ]
+      },
+      "parameters_set": {
+        "Oscillators": [
+          "Oscillator Model [OSC/Model] = 0",
+          "Osc 1 Waveform (Triple VCO morph) [OSC/Shape1] = 5.20",
+          "Volume 1 [OSC/Vol1] = 85.00",
+          "Osc 2 tune / detune [OSC/Tune2] = 0.05",
+          "Osc 2 Waveform (Triple VCO morph) [OSC/Shape2] = 6.50",
+          "Volume 2 [OSC/Vol2] = 60.00",
+          "Osc 3 tune / detune [OSC/Tune3] = -12.00",
+          "Osc 3 Waveform (Triple VCO morph) [OSC/Shape3] = 3.00",
+          "Volume 3 / DCO Sub level [OSC/Vol3] = 55.00"
+        ],
+        "High-pass / Feedback": [
+          "Feedback (post-filter -> mixer) [VCF1/Fback] = 20.00"
+        ],
+        "Main filter": [
+          "Filter Model [VCF1/Model] = 0",
+          "Cutoff [VCF1/Freq] = 52.00",
+          "Resonance / Emphasis / Peak [VCF1/Res] = 28.00",
+          "Key follow (KYBD) [VCF1/KeyScl] = 40.00",
+          "Cutoff mod 1 amount [VCF1/FMDpt] = 48.00",
+          "Cutoff mod 2 source [VCF1/FM2Src] = 1",
+          "Cutoff mod 2 amount [VCF1/FM2Dpt] = 30.00"
+        ],
+        "Envelope 1": [
+          "Decay [ENV1/Dec] = 45.00",
+          "Sustain [ENV1/Sus] = 70.00",
+          "Release [ENV1/Rel] = 12.00",
+          "Velocity [ENV1/Vel] = 25.00"
+        ],
+        "Envelope 2": [
+          "Decay [ENV2/Dec] = 38.00",
+          "Sustain [ENV2/Sus] = 15.00",
+          "Release [ENV2/Rel] = 15.00",
+          "Velocity [ENV2/Vel] = 40.00"
+        ],
+        "Voice": [
+          "Voice Mode [VCC/Mode] = 1",
+          "Glide [VCC/Porta] = 6.00",
+          "Transpose [VCC/Trsp] = -12"
+        ],
+        "Trimmers": [
+          "Voice Drift [OSC/Drift] = 15.00",
+          "Cutoff variance [OPT/CSlop] = 8.00"
+        ],
+        "Amplifier": [
+          "Volume (VCA gain) [VCA1/Vol] = 55.00"
+        ]
+      },
+      "warnings": [],
+      "validation": {
+        "structural": "passed",
+        "diva_load_test": "not_run",
+        "audio_verification": "not_run",
+        "errors": []
+      },
+      "description": {
+        "summary": "Dark, sustained Triple VCO patch through a Ladder filter.",
+        "character_tags": [
+          "analog",
+          "dark",
+          "sustained"
+        ],
+        "description": "Synthesis: subtractive, Triple VCO -> Ladder.\nTriple VCO (Minimoog-style morphing oscillators): osc1 ~saw (+0 st), osc2 ~square (+0.05 st), osc3 ~triangle (-12 st) (waveform names approximate). Mixer feedback 20 thickens the low end. Detune: osc2 detuned by ~5 cents -> chorusing/beating.\nLadder filter, 4-pole 24 dB: cutoff 52 (dark), resonance 28 (classic analog emphasis). Env2 sweeps cutoff by 48 (peaks around 100) with a instant attack and slow decay.\nAmp envelope (Analogue): instant attack, sustains at 70, fast release.\nMovement: essentially static (no LFO/random routes).\nPerformance control: ModWhl -> Cutoff (mod 2) (30).\nEffects: none (dry).\nVoicing: mono, 16 voices, glide 6.\nLikely use: bass line.",
+        "likely_use": "bass line",
+        "basis": "Inferred from parameter values only. The preset was NOT listened to and no audio analysis was performed."
+      }
+    },
+    {
+      "index": 2,
+      "ok": true,
+      "name": "KY Faded Piano",
+      "path": "KY Faded Piano.h2p",
+      "architecture": "DCO -> Multimode",
+      "concept": {
+        "intent": "Faded electric-piano-like keys: struck, warm, a little worn, sitting behind a vocal.",
+        "spectral": "DCO PW-reactive pulse at 30% width (hollow), saw off, a quiet sub and a hint of noise for 'air'; HPF Pre removes boom.",
+        "temporal": "Instant attack, medium decay to low sustain — a struck, decaying envelope. Digital envelope with curve (C) for a softer shape.",
+        "filtering": "Multimode LP4, cutoff 70, light resonance, strong key follow so high notes stay present.",
+        "modulation": "Env2 -> cutoff, velocity -> cutoff, slow LFO2 PWM for movement, random per-note pan for width.",
+        "dynamics": "Velocity on both envelopes and the cutoff.",
+        "space": "Classic chorus (Juno-like pairing) then a short dark plate.",
+        "architecture": "DCO + Multimode: the Juno-style signal path is ideal for polished, chorused keys."
+      },
+      "meta": {
+        "name": "KY Faded Piano",
+        "author": "PLUIT / diva-mcp",
+        "bank": "PLUIT - DIVA LAB VOL. 01",
+        "description": "Soft electronic keys: hollow DCO pulse through a muted multimode filter, gentle chorus and a small plate.",
+        "usage": "Velocity = brightness. Chords and slow melodies.",
+        "categories": [
+          "Keys:Electric"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Soft",
+          "Vintage",
+          "Warm"
+        ]
+      },
+      "parameters_set": {
+        "Oscillators": [
+          "Oscillator Model [OSC/Model] = 2",
+          "DCO Pulse selector [OSC/PWShp] = 3",
+          "DCO Sawtooth selector [OSC/SawShp] = 0",
+          "Volume 3 / DCO Sub level [OSC/Vol3] = 20.00",
+          "Noise volume [OSC/Noise] = 3.00",
+          "Pulse Width [OSC/PW] = 30.00",
+          "PWM depth [OSC/PWMDpt] = 6.00"
+        ],
+        "High-pass / Feedback": [
+          "HPF / Feedback model [HPF/Model] = 2",
+          "HPF Frequency [HPF/Freq] = 42.00"
+        ],
+        "Main filter": [
+          "Filter Model [VCF1/Model] = 2",
+          "Cutoff [VCF1/Freq] = 70.00",
+          "Resonance / Emphasis / Peak [VCF1/Res] = 6.00",
+          "Key follow (KYBD) [VCF1/KeyScl] = 55.00",
+          "Cutoff mod 1 amount [VCF1/FMDpt] = 34.00",
+          "Cutoff mod 2 source [VCF1/FM2Src] = 6",
+          "Cutoff mod 2 amount [VCF1/FM2Dpt] = 12.00"
+        ],
+        "Envelope 1": [
+          "Envelope Model [ENV1/Model] = 2",
+          "Decay [ENV1/Dec] = 62.00",
+          "Sustain [ENV1/Sus] = 18.00",
+          "Release [ENV1/Rel] = 38.00",
+          "Velocity [ENV1/Vel] = 45.00",
+          "Curve (C) [ENV1/Crve] = 1"
+        ],
+        "Envelope 2": [
+          "Envelope Model [ENV2/Model] = 2",
+          "Decay [ENV2/Dec] = 48.00",
+          "Sustain [ENV2/Sus] = 10.00",
+          "Release [ENV2/Rel] = 35.00",
+          "Velocity [ENV2/Vel] = 55.00",
+          "Curve (C) [ENV2/Crve] = 1"
+        ],
+        "LFO 2": [
+          "Waveform [LFO2/Wave] = 0",
+          "Restart [LFO2/Trig] = 0",
+          "Rate (offset from Sync) [LFO2/Rate] = -1.00"
+        ],
+        "Amplifier": [
+          "Pan Mod source [VCA1/PanSrc] = 11",
+          "Pan Mod amount [VCA1/PanDpt] = 12.00",
+          "Volume (VCA gain) [VCA1/Vol] = 52.00"
+        ],
+        "Voice": [
+          "Voices (polyphony) [VCC/Voices] = 6"
+        ],
+        "Trimmers": [
+          "Voice Drift [OSC/Drift] = 25.00",
+          "Cutoff variance [OPT/CSlop] = 10.00",
+          "Envelope-rate variance [OPT/ESlop] = 12.00"
+        ],
+        "Effects": [
+          "FX1 active [main/#FX1] = 1",
+          "FX2 type [FX2/Module] = 'Plate2'",
+          "FX2 active [main/#FX2] = 1"
+        ],
+        "Effects (FX1)": [
+          "Chorus Rate [Chrs1/Rate] = 30.00",
+          "Chorus Depth [Chrs1/Depth] = 40.00",
+          "Chorus Wet [Chrs1/Wet] = 60.00"
+        ],
+        "Effects (FX2)": [
+          "Plate PreDelay [Plate2/Pre] = 10.00",
+          "Plate Diffusion [Plate2/Diff] = 85.00",
+          "Plate Damp [Plate2/Damp] = 85.00",
+          "Plate Decay [Plate2/Decay] = 45.00",
+          "Plate Size [Plate2/Size] = 110.00",
+          "Plate Wet [Plate2/Wet] = 22.00"
+        ]
+      },
+      "warnings": [],
+      "validation": {
+        "structural": "passed",
+        "diva_load_test": "not_run",
+        "audio_verification": "not_run",
+        "errors": []
+      },
+      "description": {
+        "summary": "Warm / muted, struck, decaying (key-like) DCO patch through a Multimode filter with modulation movement, Chorus (Classic) + Plate.",
+        "character_tags": [
+          "analog",
+          "unstable",
+          "warm",
+          "struck,",
+          "moving",
+          "spacious"
+        ],
+        "description": "Synthesis: subtractive, DCO -> Multimode.\nDCO (Juno-style single oscillator): pulse PWM pulse (reacts to PW), saw off, sub -1 oct shape 1 at 20. Voice drift 25 introduces analog pitch instability.\nMultimode filter (LP4): cutoff 70 (warm / muted), resonance 6 (smooth). Env2 sweeps cutoff by 34 (peaks around 104) with a instant attack and slow decay. HPF Pre at 42 trims the lows.\nAmp envelope (Digital): instant attack, very slow decay to 18, slow release. Velocity-sensitive (45).\nMovement: LFO2 -> Pulse width (6); Random -> Pan (12).\nPerformance control: Velocity -> Cutoff (mod 2) (12).\nEffects: Chorus (Classic) -> Plate.\nVoicing: poly, 12 voices.\nLikely use: keys / chords.",
+        "likely_use": "keys / chords",
+        "basis": "Inferred from parameter values only. The preset was NOT listened to and no audio analysis was performed."
+      }
+    },
+    {
+      "index": 3,
+      "ok": true,
+      "name": "PL Distant Echo",
+      "path": "PL Distant Echo.h2p",
+      "architecture": "Digital -> Uhbie",
+      "concept": {
+        "intent": "A short, bittersweet pluck whose echoes drift away like a memory.",
+        "spectral": "Digital oscillator: triangle (with its synced sine harmonic) as the core, a quiet sawtooth an octave up for a glassy edge.",
+        "temporal": "Instant attack, short decay, no sustain; filter envelope even shorter than the amp for the pluck.",
+        "filtering": "Uhbie 2-pole SVF mostly low-pass (mix 8), cutoff 62, moderate resonance — silky rather than aggressive.",
+        "modulation": "Env2 -> cutoff (50), velocity -> cutoff (15).",
+        "dynamics": "Velocity affects level and brightness.",
+        "space": "Delay 3/16 - 4/16 - 6/16 with damped feedback and wow (tape wobble), then a large soft plate.",
+        "architecture": "Digital + Uhbie: a cleaner, slightly glassy source contrasts with the analogue presets and the SEM-style filter keeps it smooth."
+      },
+      "meta": {
+        "name": "PL Distant Echo",
+        "author": "PLUIT / diva-mcp",
+        "bank": "PLUIT - DIVA LAB VOL. 01",
+        "description": "Melancholic pluck: digital triangle with an octave saw, silky Uhbie filter snap and a wobbling tape-style delay.",
+        "usage": "Velocity = brightness. Works for arpeggios.",
+        "categories": [
+          "Plucks"
+        ],
+        "features": [
+          "Poly",
+          "Stereo"
+        ],
+        "character": [
+          "Soft",
+          "Dark",
+          "Spacey"
+        ]
+      },
+      "parameters_set": {
+        "Oscillators": [
+          "Oscillator Model [OSC/Model] = 4",
+          "Digital osc 1 waveform [OSC/DgtlTp1] = 6",
+          "Osc 2 tune / detune [OSC/Tune2] = 12.02",
+          "Osc Mix (VCO1 <-> VCO2) [OSC/OscMix] = 25.00"
+        ],
+        "High-pass / Feedback": [
+          "HPF / Feedback model [HPF/Model] = 2",
+          "HPF Frequency [HPF/Freq] = 36.00"
+        ],
+        "Main filter": [
+          "Filter Model [VCF1/Model] = 4",
+          "Cutoff [VCF1/Freq] = 62.00",
+          "Resonance / Emphasis / Peak [VCF1/Res] = 22.00",
+          "Uhbie Mix (LP -> BR/BP -> HP) [VCF1/ShpMix] = 8.00",
+          "Uhbie BR/BP switch [VCF1/BpUbie] = 1",
+          "Cutoff mod 1 amount [VCF1/FMDpt] = 50.00",
+          "Cutoff mod 2 source [VCF1/FM2Src] = 6",
+          "Cutoff mod 2 amount [VCF1/FM2Dpt] = 15.00"
+        ],
+        "Envelope 1": [
+          "Decay [ENV1/Dec] = 40.00",
+          "Sustain [ENV1/Sus] = 0.00",
+          "Release [ENV1/Rel] = 35.00",
+          "Velocity [ENV1/Vel] = 35.00"
+        ],
+        "Envelope 2": [
+          "Decay [ENV2/Dec] = 28.00",
+          "Release [ENV2/Rel] = 25.00",
+          "Velocity [ENV2/Vel] = 45.00"
+        ],
+        "Voice": [
+          "Voices (polyphony) [VCC/Voices] = 5"
+        ],
+        "Trimmers": [
+          "Voice Drift [OSC/Drift] = 20.00"
+        ],
+        "Effects": [
+          "FX1 type [FX1/Module] = 'Delay1'",
+          "FX1 active [main/#FX1] = 1",
+          "FX2 type [FX2/Module] = 'Plate2'",
+          "FX2 active [main/#FX2] = 1"
+        ],
+        "Effects (FX1)": [
+          "Delay Side Vol [Delay1/SVol] = 35.00",
+          "Delay Center Vol [Delay1/CVol] = 10.00",
+          "Delay Feedback [Delay1/FeedB] = 42.00",
+          "Delay HP (feedback path) [Delay1/HP] = 20.00",
+          "Delay LP (feedback path) [Delay1/LP] = 55.00",
+          "Delay Wow (tape wobble) [Delay1/Wow] = 45.00"
+        ],
+        "Effects (FX2)": [
+          "Plate PreDelay [Plate2/Pre] = 30.00",
+          "Plate Diffusion [Plate2/Diff] = 95.00",
+          "Plate Decay [Plate2/Decay] = 58.00",
+          "Plate Size [Plate2/Size] = 170.00",
+          "Plate Dry [Plate2/Dry] = 92.00",
+          "Plate Wet [Plate2/Wet] = 26.00"
+        ]
+      },
+      "warnings": [],
+      "validation": {
+        "structural": "passed",
+        "diva_load_test": "not_run",
+        "audio_verification": "not_run",
+        "errors": []
+      },
+      "description": {
+        "summary": "Warm / muted, percussive / plucked Digital patch through a Uhbie filter, Delay + Plate.",
+        "character_tags": [
+          "digital",
+          "warm",
+          "percussive",
+          "spacious"
+        ],
+        "description": "Synthesis: subtractive, Digital -> Uhbie.\nDigital (JP-8000-style): osc1 Triangle, osc2 Sawtooth (+12.02 st), mix 25. Detune: osc2 detuned by ~2 cents -> chorusing/beating.\nUhbie filter: cutoff 62 (warm / muted), resonance 22 (classic analog emphasis). Env2 sweeps cutoff by 50 (peaks around 112) with a instant attack and moderate decay. HPF Pre at 36 trims the lows.\nAmp envelope (Analogue): instant attack, slow decay to 0, moderate release. Velocity-sensitive (35).\nMovement: essentially static (no LFO/random routes).\nPerformance control: Velocity -> Cutoff (mod 2) (15).\nEffects: Delay -> Plate.\nVoicing: poly, 8 voices.\nLikely use: pluck / arpeggio.",
+        "likely_use": "pluck / arpeggio",
+        "basis": "Inferred from parameter values only. The preset was NOT listened to and no audio analysis was performed."
+      }
+    },
+    {
+      "index": 4,
+      "ok": true,
+      "name": "LD Northern Light",
+      "path": "LD Northern Light.h2p",
+      "architecture": "Triple VCO -> Bite",
+      "concept": {
+        "intent": "A singing lead with a bit of bite that responds to the player: vibrato on the wheel, brightness on pressure.",
+        "spectral": "Triple VCO: saw osc1, detuned narrow-square osc2, a quiet triangle-ish osc3 an octave up; a little mixer feedback.",
+        "temporal": "Near-instant attack, high sustain, medium release; legato with glide.",
+        "filtering": "Bite (MS-20-style) Rev 2, cutoff 78, resonance 32 — characterful but not screaming at these levels.",
+        "modulation": "Env2 -> cutoff (26), Pressure -> cutoff (24); LFO1 vibrato with depth controlled by the mod wheel and a delayed fade-in.",
+        "dynamics": "Velocity on both envelopes, aftertouch for brightness.",
+        "space": "Rhythmic delay (3/16, 6/16, 4/16) into a medium plate.",
+        "architecture": "Triple VCO + Bite: fat Minimoog-style source with the more aggressive, vocal Bite filter for an expressive lead."
+      },
+      "meta": {
+        "name": "LD Northern Light",
+        "author": "PLUIT / diva-mcp",
+        "bank": "PLUIT - DIVA LAB VOL. 01",
+        "description": "Expressive analogue mono lead: three VCOs into a Bite Rev 2 filter, legato glide, mod-wheel vibrato and aftertouch brightness.",
+        "usage": "MW = vibrato (fades in), AT = brighter, legato = glide.",
+        "categories": [
+          "Leads"
+        ],
+        "features": [
+          "Mono",
+          "Glide",
+          "Stereo"
+        ],
+        "character": [
+          "Bright",
+          "Warm",
+          "Moving"
+        ]
+      },
+      "parameters_set": {
+        "Oscillators": [
+          "Oscillator Model [OSC/Model] = 0",
+          "Volume 1 [OSC/Vol1] = 80.00",
+          "Osc 2 tune / detune [OSC/Tune2] = 0.06",
+          "Osc 2 Waveform (Triple VCO morph) [OSC/Shape2] = 7.20",
+          "Volume 2 [OSC/Vol2] = 65.00",
+          "Osc 3 tune / detune [OSC/Tune3] = 12.00",
+          "Osc 3 Waveform (Triple VCO morph) [OSC/Shape3] = 4.00",
+          "Volume 3 / DCO Sub level [OSC/Vol3] = 25.00"
+        ],
+        "High-pass / Feedback": [
+          "Feedback (post-filter -> mixer) [VCF1/Fback] = 12.00"
+        ],
+        "Main filter": [
+          "Filter Model [VCF1/Model] = 3",
+          "Cutoff [VCF1/Freq] = 78.00",
+          "Resonance / Emphasis / Peak [VCF1/Res] = 32.00",
+          "Key follow (KYBD) [VCF1/KeyScl] = 45.00",
+          "Bite revision [VCF1/SkRev] = 2",
+          "Cutoff mod 1 amount [VCF1/FMDpt] = 26.00",
+          "Cutoff mod 2 source [VCF1/FM2Src] = 7",
+          "Cutoff mod 2 amount [VCF1/FM2Dpt] = 24.00"
+        ],
+        "Envelope 1": [
+          "Attack [ENV1/Atk] = 6.00",
+          "Decay [ENV1/Dec] = 55.00",
+          "Sustain [ENV1/Sus] = 88.00",
+          "Release [ENV1/Rel] = 28.00"
+        ],
+        "Envelope 2": [
+          "Attack [ENV2/Atk] = 4.00",
+          "Sustain [ENV2/Sus] = 35.00",
+          "Release [ENV2/Rel] = 30.00",
+          "Velocity [ENV2/Vel] = 35.00"
+        ],
+        "LFO 1": [
+          "Waveform [LFO1/Wave] = 0",
+          "Rate (offset from Sync) [LFO1/Rate] = 0.50",
+          "Delay (fade-in) [LFO1/Dly] = 25.00",
+          "Depth Mod amount [LFO1/DMD1] = 100.00"
+        ],
+        "Tuning": [
+          "Vibrato (LFO1 -> pitch) [OSC/VtoD] = 25.00"
+        ],
+        "Voice": [
+          "Voice Mode [VCC/Mode] = 2",
+          "Glide [VCC/Porta] = 22.00"
+        ],
+        "Trimmers": [
+          "Voice Drift [OSC/Drift] = 25.00"
+        ],
+        "Amplifier": [
+          "Volume (VCA gain) [VCA1/Vol] = 52.00"
+        ],
+        "Effects": [
+          "FX1 type [FX1/Module] = 'Delay1'",
+          "FX1 active [main/#FX1] = 1",
+          "FX2 type [FX2/Module] = 'Plate2'",
+          "FX2 active [main/#FX2] = 1"
+        ],
+        "Effects (FX1)": [
+          "Delay Center time (= feedback time) [Delay1/CDel] = 6.00",
+          "Delay Right time [Delay1/RDel] = 4.00",
+          "Delay Center Vol [Delay1/CVol] = 15.00",
+          "Delay Feedback [Delay1/FeedB] = 35.00",
+          "Delay HP (feedback path) [Delay1/HP] = 25.00",
+          "Delay LP (feedback path) [Delay1/LP] = 65.00",
+          "Delay Wow (tape wobble) [Delay1/Wow] = 15.00"
+        ],
+        "Effects (FX2)": [
+          "Plate PreDelay [Plate2/Pre] = 25.00",
+          "Plate Diffusion [Plate2/Diff] = 90.00",
+          "Plate Damp [Plate2/Damp] = 78.00",
+          "Plate Decay [Plate2/Decay] = 55.00",
+          "Plate Wet [Plate2/Wet] = 22.00"
+        ]
+      },
+      "warnings": [],
+      "validation": {
+        "structural": "passed",
+        "diva_load_test": "not_run",
+        "audio_verification": "not_run",
+        "errors": []
+      },
+      "description": {
+        "summary": "Warm / muted, sustained Triple VCO patch through a Bite filter, Delay + Plate.",
+        "character_tags": [
+          "analog",
+          "unstable",
+          "warm",
+          "sustained",
+          "moving",
+          "spacious"
+        ],
+        "description": "Synthesis: subtractive, Triple VCO -> Bite.\nTriple VCO (Minimoog-style morphing oscillators): osc1 ~saw (+0 st), osc2 ~square (+0.06 st), osc3 ~saw (+12 st) (waveform names approximate). Mixer feedback 12 thickens the low end. Detune: osc2 detuned by ~6 cents -> chorusing/beating. Voice drift 25 introduces analog pitch instability.\nBite filter, Rev 2: cutoff 78 (warm / muted), resonance 32 (classic analog emphasis). Env2 sweeps cutoff by 26 (peaks around 104) with a fast attack and slow decay.\nAmp envelope (Analogue): fast attack, sustains at 88, moderate release.\nMovement: LFO1 vibrato (25, depth via ModWhl).\nPerformance control: Pressure -> Cutoff (mod 2) (24); ModWhl -> LFO1 depth (100).\nEffects: Delay -> Plate.\nVoicing: legato, 16 voices, glide 22.\nLikely use: lead / melody.",
+        "likely_use": "lead / melody",
+        "basis": "Inferred from parameter values only. The preset was NOT listened to and no audio analysis was performed."
+      }
+    }
+  ]
+}

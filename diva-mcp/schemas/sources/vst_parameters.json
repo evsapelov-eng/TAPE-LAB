@@ -1,0 +1,2492 @@
+{
+ "_provenance": {
+  "vst_name": "Diva VST parameter names by index: acids-ircam/flow_synthesizer code/synth/diva_params.txt (281 entries); cross-checked against KittenVillage/ReasonRemoteInfo \"Diva(x64) Remote Info.txt\" and pcmbs/synth-proxy src/data/synths/diva.py",
+  "vst_index+range": "h2p tag <-> VST index and value ranges: maudgrol/deepdiva (MIT) src/deepdiva/utils/dictionaries.py (get_parameter_index_to_h2p_tag_list + get_norm_dict), parsed statically (no code executed)",
+  "note": "Ranges come from a third-party research project and are cross-checked against observed preset values in build-schema; conflicts are flagged in diva_parameters.json."
+ },
+ "parameters": {
+  "main/CcOp": {
+   "vst_index": 0,
+   "vst_name": "main: Output",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 200
+   }
+  },
+  "main/#FX1": {
+   "vst_index": 1,
+   "vst_name": "main: Active #FX1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "main/#FX2": {
+   "vst_index": 2,
+   "vst_name": "main: Active #FX2",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "PCore/LED": {
+   "vst_index": 3,
+   "vst_name": "PCore: LED Colour",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "CLK/Mult": {
+   "vst_index": 256,
+   "vst_name": "CLK: Multiply",
+   "range": {
+    "type": "float",
+    "min": 50,
+    "max": 200
+   }
+  },
+  "CLK/Base": {
+   "vst_index": 257,
+   "vst_name": "CLK: TimeBase",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "CLK/Swing": {
+   "vst_index": 258,
+   "vst_name": "CLK: Swing",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ARP/Dir": {
+   "vst_index": 259,
+   "vst_name": "ARP: Direction",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 5
+   }
+  },
+  "ARP/Oct": {
+   "vst_index": 260,
+   "vst_name": "ARP: Octaves",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "ARP/CDiv": {
+   "vst_index": 261,
+   "vst_name": "ARP: Multiply",
+   "range": null
+  },
+  "ARP/Rstrt": {
+   "vst_index": 262,
+   "vst_name": "ARP: Restart",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 12
+   }
+  },
+  "ARP/OnOff": {
+   "vst_index": 263,
+   "vst_name": "ARP: OnOff",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "ARP/Order": {
+   "vst_index": 271,
+   "vst_name": "ARP: Order",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "VCC/Voices": {
+   "vst_index": 4,
+   "vst_name": "VCC: Voices",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 7
+   }
+  },
+  "VCC/Voicing": {
+   "vst_index": 5,
+   "vst_name": "VCC: Voice Stack",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 6
+   }
+  },
+  "VCC/Mode": {
+   "vst_index": 6,
+   "vst_name": "VCC: Mode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 4
+   }
+  },
+  "VCC/PortaM": {
+   "vst_index": 7,
+   "vst_name": "VCC: GlideMode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "VCC/Porta": {
+   "vst_index": 8,
+   "vst_name": "VCC: Glide",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "VCC/Porta2": {
+   "vst_index": 9,
+   "vst_name": "VCC: Glide2",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCC/PRange": {
+   "vst_index": 10,
+   "vst_name": "VCC: GlideRange",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "VCC/PB": {
+   "vst_index": 11,
+   "vst_name": "VCC: PitchBend Up",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 26
+   }
+  },
+  "VCC/PBD": {
+   "vst_index": 12,
+   "vst_name": "VCC: PitchBend Down",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 26
+   }
+  },
+  "VCC/MTunS": {
+   "vst_index": 13,
+   "vst_name": "VCC: TuningMode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "VCC/Trsp": {
+   "vst_index": 14,
+   "vst_name": "VCC: Transpose",
+   "range": {
+    "type": "int",
+    "min": -24,
+    "max": 24
+   }
+  },
+  "VCC/FTun": {
+   "vst_index": 15,
+   "vst_name": "VCC: FineTuneCents",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCC/Prior": {
+   "vst_index": 16,
+   "vst_name": "VCC: Note Priority",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "OPT/TSlop": {
+   "vst_index": 20,
+   "vst_name": "OPT: TuneSlop",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OPT/CSlop": {
+   "vst_index": 21,
+   "vst_name": "OPT: CutoffSlop",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OPT/GSlop": {
+   "vst_index": 22,
+   "vst_name": "OPT: GlideSlop",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OPT/PSlop": {
+   "vst_index": 23,
+   "vst_name": "OPT: PWSlop",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OPT/ESlop": {
+   "vst_index": 24,
+   "vst_name": "OPT: EnvrateSlop",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OPT/V1Mod": {
+   "vst_index": 25,
+   "vst_name": "OPT: V1Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OPT/V2Mod": {
+   "vst_index": 26,
+   "vst_name": "OPT: V2Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OPT/V3Mod": {
+   "vst_index": 27,
+   "vst_name": "OPT: V3Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OPT/V4Mod": {
+   "vst_index": 28,
+   "vst_name": "OPT: V4Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OPT/V5Mod": {
+   "vst_index": 29,
+   "vst_name": "OPT: V5Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OPT/V6Mod": {
+   "vst_index": 30,
+   "vst_name": "OPT: V6Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OPT/V7Mod": {
+   "vst_index": 31,
+   "vst_name": "OPT: V7Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OPT/V8Mod": {
+   "vst_index": 32,
+   "vst_name": "OPT: V8Mod",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "ENV1/Atk": {
+   "vst_index": 33,
+   "vst_name": "ENV1: Attack",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV1/Dec": {
+   "vst_index": 34,
+   "vst_name": "ENV1: Decay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV1/Sus": {
+   "vst_index": 35,
+   "vst_name": "ENV1: Sustain",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV1/Rel": {
+   "vst_index": 36,
+   "vst_name": "ENV1: Release",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV1/Vel": {
+   "vst_index": 37,
+   "vst_name": "ENV1: Velocity",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV1/Model": {
+   "vst_index": 38,
+   "vst_name": "ENV1: Model",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "ENV1/Trig": {
+   "vst_index": 39,
+   "vst_name": "ENV1: Trigger",
+   "range": null
+  },
+  "ENV1/Quant": {
+   "vst_index": 40,
+   "vst_name": "ENV1: Quantise",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "ENV1/Crve": {
+   "vst_index": 41,
+   "vst_name": "ENV1: Curve",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "ENV1/RelOn": {
+   "vst_index": 42,
+   "vst_name": "ENV1: Release On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "ENV1/KeyFlw": {
+   "vst_index": 43,
+   "vst_name": "ENV1: KeyFollow",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV2/Atk": {
+   "vst_index": 44,
+   "vst_name": "ENV2: Attack",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV2/Dec": {
+   "vst_index": 45,
+   "vst_name": "ENV2: Decay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV2/Sus": {
+   "vst_index": 46,
+   "vst_name": "ENV2: Sustain",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV2/Rel": {
+   "vst_index": 47,
+   "vst_name": "ENV2: Release",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV2/Vel": {
+   "vst_index": 48,
+   "vst_name": "ENV2: Velocity",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "ENV2/Model": {
+   "vst_index": 49,
+   "vst_name": "ENV2: Model",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "ENV2/Trig": {
+   "vst_index": 50,
+   "vst_name": "ENV2: Trigger",
+   "range": null
+  },
+  "ENV2/Quant": {
+   "vst_index": 51,
+   "vst_name": "ENV2: Quantise",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "ENV2/Crve": {
+   "vst_index": 52,
+   "vst_name": "ENV2: Curve",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "ENV2/RelOn": {
+   "vst_index": 53,
+   "vst_name": "ENV2: Release On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "ENV2/KeyFlw": {
+   "vst_index": 54,
+   "vst_name": "ENV2: KeyFollow",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "LFO1/Sync": {
+   "vst_index": 55,
+   "vst_name": "LFO1: Sync",
+   "range": {
+    "type": "int",
+    "min": -3,
+    "max": 23
+   }
+  },
+  "LFO1/Trig": {
+   "vst_index": 56,
+   "vst_name": "LFO1: Restart",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "LFO1/Wave": {
+   "vst_index": 57,
+   "vst_name": "LFO1: Waveform",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 7
+   }
+  },
+  "LFO1/Phse": {
+   "vst_index": 58,
+   "vst_name": "LFO1: Phase",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "LFO1/Polar": {
+   "vst_index": 272,
+   "vst_name": "LFO1: Polarity",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "LFO1/Dly": {
+   "vst_index": 59,
+   "vst_name": "LFO1: Delay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "LFO1/DMS1": {
+   "vst_index": 60,
+   "vst_name": "LFO1: DepthMod Src1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "LFO1/DMD1": {
+   "vst_index": 61,
+   "vst_name": "LFO1: DepthMod Dpt1",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "LFO1/Rate": {
+   "vst_index": 62,
+   "vst_name": "LFO1: Rate",
+   "range": {
+    "type": "float",
+    "min": -5,
+    "max": 5
+   }
+  },
+  "LFO1/FMS1": {
+   "vst_index": 63,
+   "vst_name": "LFO1: FreqMod Src1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "LFO1/FMD1": {
+   "vst_index": 64,
+   "vst_name": "LFO1: FreqMod Dpt",
+   "range": {
+    "type": "float",
+    "min": -5,
+    "max": 5
+   }
+  },
+  "LFO2/Sync": {
+   "vst_index": 65,
+   "vst_name": "LFO2: Sync",
+   "range": {
+    "type": "int",
+    "min": -3,
+    "max": 23
+   }
+  },
+  "LFO2/Trig": {
+   "vst_index": 66,
+   "vst_name": "LFO2: Restart",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "LFO2/Wave": {
+   "vst_index": 67,
+   "vst_name": "LFO2: Waveform",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 7
+   }
+  },
+  "LFO2/Phse": {
+   "vst_index": 68,
+   "vst_name": "LFO2: Phase",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "LFO2/Polar": {
+   "vst_index": 273,
+   "vst_name": "LFO2: Polarity",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "LFO2/Dly": {
+   "vst_index": 69,
+   "vst_name": "LFO2: Delay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "LFO2/DMS1": {
+   "vst_index": 70,
+   "vst_name": "LFO2: DepthMod Src1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "LFO2/DMD1": {
+   "vst_index": 71,
+   "vst_name": "LFO2: DepthMod Dpt1",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "LFO2/Rate": {
+   "vst_index": 72,
+   "vst_name": "LFO2: Rate",
+   "range": {
+    "type": "float",
+    "min": -5,
+    "max": 5
+   }
+  },
+  "LFO2/FMS1": {
+   "vst_index": 73,
+   "vst_name": "LFO2: FreqMod Src1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "LFO2/FMD1": {
+   "vst_index": 74,
+   "vst_name": "LFO2: FreqMod Dpt",
+   "range": {
+    "type": "float",
+    "min": -5,
+    "max": 5
+   }
+  },
+  "MOD/Quant": {
+   "vst_index": 75,
+   "vst_name": "MOD: Quantise",
+   "range": {
+    "type": "float",
+    "min": 2,
+    "max": 100
+   }
+  },
+  "MOD/Slew": {
+   "vst_index": 76,
+   "vst_name": "MOD: Slew Rate",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "MOD/RSrc": {
+   "vst_index": 77,
+   "vst_name": "MOD: RectifySource",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "MOD/ISrc": {
+   "vst_index": 78,
+   "vst_name": "MOD: InvertSource",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "MOD/QSrc": {
+   "vst_index": 79,
+   "vst_name": "MOD: QuantiseSource",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "MOD/LSrc": {
+   "vst_index": 80,
+   "vst_name": "MOD: LagSource",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "MOD/A1Src": {
+   "vst_index": 81,
+   "vst_name": "MOD: AddSource1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "MOD/A2Src": {
+   "vst_index": 82,
+   "vst_name": "MOD: AddSource2",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "MOD/M1Src": {
+   "vst_index": 83,
+   "vst_name": "MOD: MulSource1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "MOD/M2Src": {
+   "vst_index": 84,
+   "vst_name": "MOD: MulSource2",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "OSC/Model": {
+   "vst_index": 85,
+   "vst_name": "OSC: Model",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 4
+   }
+  },
+  "OSC/Tune1": {
+   "vst_index": 86,
+   "vst_name": "OSC: Tune1",
+   "range": {
+    "type": "int",
+    "min": -24,
+    "max": 24
+   }
+  },
+  "OSC/Tune2": {
+   "vst_index": 87,
+   "vst_name": "OSC: Tune2",
+   "range": {
+    "type": "float",
+    "min": -30,
+    "max": 30
+   }
+  },
+  "OSC/Tune3": {
+   "vst_index": 88,
+   "vst_name": "OSC: Tune3",
+   "range": {
+    "type": "float",
+    "min": -30,
+    "max": 30
+   }
+  },
+  "OSC/VtoD": {
+   "vst_index": 89,
+   "vst_name": "OSC: Vibrato",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/PW": {
+   "vst_index": 90,
+   "vst_name": "OSC: PulseWidth",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/Shape1": {
+   "vst_index": 91,
+   "vst_name": "OSC: Shape1",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 9
+   }
+  },
+  "OSC/Shape2": {
+   "vst_index": 92,
+   "vst_name": "OSC: Shape2",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 9
+   }
+  },
+  "OSC/Shape3": {
+   "vst_index": 93,
+   "vst_name": "OSC: Shape3",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 9
+   }
+  },
+  "OSC/FM": {
+   "vst_index": 94,
+   "vst_name": "OSC: FM",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/Sync2": {
+   "vst_index": 95,
+   "vst_name": "OSC: Sync2",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/OscMix": {
+   "vst_index": 96,
+   "vst_name": "OSC: OscMix",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/Vol1": {
+   "vst_index": 97,
+   "vst_name": "OSC: Volume1",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/Vol2": {
+   "vst_index": 98,
+   "vst_name": "OSC: Volume2",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/Vol3": {
+   "vst_index": 99,
+   "vst_name": "OSC: Volume3",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/PWShp": {
+   "vst_index": 100,
+   "vst_name": "OSC: PulseShape",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "OSC/SawShp": {
+   "vst_index": 101,
+   "vst_name": "OSC: SawShape",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 5
+   }
+  },
+  "OSC/SubShp": {
+   "vst_index": 102,
+   "vst_name": "OSC: SuboscShape",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 5
+   }
+  },
+  "OSC/TM1Src": {
+   "vst_index": 103,
+   "vst_name": "OSC: Tune1ModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "OSC/TM1Dpt": {
+   "vst_index": 104,
+   "vst_name": "OSC: Tune1ModDepth",
+   "range": {
+    "type": "float",
+    "min": -24,
+    "max": 24
+   }
+  },
+  "OSC/TM2Src": {
+   "vst_index": 105,
+   "vst_name": "OSC: Tune2ModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "OSC/TM2Dpt": {
+   "vst_index": 106,
+   "vst_name": "OSC: Tune2ModDepth",
+   "range": {
+    "type": "float",
+    "min": -24,
+    "max": 24
+   }
+  },
+  "OSC/PWMSrc": {
+   "vst_index": 107,
+   "vst_name": "OSC: PWModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "OSC/PWMDpt": {
+   "vst_index": 108,
+   "vst_name": "OSC: PWModDepth",
+   "range": {
+    "type": "float",
+    "min": -50,
+    "max": 50
+   }
+  },
+  "OSC/Sh1Src": {
+   "vst_index": 109,
+   "vst_name": "OSC: ShapeSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "OSC/Sh1Dpt": {
+   "vst_index": 110,
+   "vst_name": "OSC: ShapeDepth",
+   "range": {
+    "type": "float",
+    "min": -50,
+    "max": 50
+   }
+  },
+  "OSC/Tri1": {
+   "vst_index": 111,
+   "vst_name": "OSC: Triangle1On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/Sin2": {
+   "vst_index": 112,
+   "vst_name": "OSC: Sine2On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/Saw1": {
+   "vst_index": 113,
+   "vst_name": "OSC: Saw1On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/PWM1": {
+   "vst_index": 114,
+   "vst_name": "OSC: Pwm1On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/Tri2": {
+   "vst_index": 115,
+   "vst_name": "OSC: Triangle2On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/Saw2": {
+   "vst_index": 116,
+   "vst_name": "OSC: Saw2On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/PW2": {
+   "vst_index": 117,
+   "vst_name": "OSC: Pulse2On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/PWM2": {
+   "vst_index": 118,
+   "vst_name": "OSC: PWM2On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/Noise1": {
+   "vst_index": 119,
+   "vst_name": "OSC: Noise1On",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/triSp": {
+   "vst_index": 120,
+   "vst_name": "OSC: ShapeModel",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "OSC/Sync3": {
+   "vst_index": 121,
+   "vst_name": "OSC: Sync3",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/Noise": {
+   "vst_index": 122,
+   "vst_name": "OSC: NoiseVol",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 4
+   }
+  },
+  "OSC/NoiseC": {
+   "vst_index": 123,
+   "vst_name": "OSC: NoiseColor",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/TM1On": {
+   "vst_index": 124,
+   "vst_name": "OSC: TuneModOsc1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/TM2On": {
+   "vst_index": 125,
+   "vst_name": "OSC: TuneModOsc2",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/TM3On": {
+   "vst_index": 126,
+   "vst_name": "OSC: TuneModOsc3",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/SM1On": {
+   "vst_index": 127,
+   "vst_name": "OSC: ShapeModOsc1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/SM2On": {
+   "vst_index": 128,
+   "vst_name": "OSC: ShapeModOsc2",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/SM3On": {
+   "vst_index": 129,
+   "vst_name": "OSC: ShapeModOsc3",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/TMmode": {
+   "vst_index": 130,
+   "vst_name": "OSC: TuneModMode",
+   "range": null
+  },
+  "OSC/Wave1": {
+   "vst_index": 131,
+   "vst_name": "OSC: EcoWave1",
+   "range": {
+    "type": "int",
+    "min": 1,
+    "max": 4
+   }
+  },
+  "OSC/Wave2": {
+   "vst_index": 132,
+   "vst_name": "OSC: EcoWave2",
+   "range": {
+    "type": "int",
+    "min": 1,
+    "max": 4
+   }
+  },
+  "OSC/RMPwm": {
+   "vst_index": 133,
+   "vst_name": "OSC: RingmodPulse",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "OSC/Drift": {
+   "vst_index": 134,
+   "vst_name": "OSC: Drift",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 200
+   }
+  },
+  "OSC/FmSrc": {
+   "vst_index": 135,
+   "vst_name": "OSC: FmModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "OSC/FmDpt": {
+   "vst_index": 136,
+   "vst_name": "OSC: FmModDepth",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OSC/NoisSrc": {
+   "vst_index": 137,
+   "vst_name": "OSC: NoiseVolModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "OSC/NoisDpt": {
+   "vst_index": 138,
+   "vst_name": "OSC: NoiseVolModDepth",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "OSC/DgtlTp1": {
+   "vst_index": 278,
+   "vst_name": "OSC: DigitalType1",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 6
+   }
+  },
+  "OSC/DgtlSp2": {
+   "vst_index": 264,
+   "vst_name": "OSC: DigitalShape2",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/DgtlTp2": {
+   "vst_index": 279,
+   "vst_name": "OSC: DigitalType2",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 6
+   }
+  },
+  "OSC/DgtlSp3": {
+   "vst_index": 265,
+   "vst_name": "OSC: DigitalShape3",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/DgtlSp4": {
+   "vst_index": 266,
+   "vst_name": "OSC: DigitalShape4",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "OSC/DNoAlia": {
+   "vst_index": 280,
+   "vst_name": "OSC: DigitalAntiAlias",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "HPF/Model": {
+   "vst_index": 139,
+   "vst_name": "HPF: Model",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "HPF/Freq": {
+   "vst_index": 140,
+   "vst_name": "HPF: Frequency",
+   "range": {
+    "type": "float",
+    "min": 30,
+    "max": 150
+   }
+  },
+  "HPF/Res": {
+   "vst_index": 141,
+   "vst_name": "HPF: Resonance",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "HPF/Rev": {
+   "vst_index": 142,
+   "vst_name": "HPF: Revision",
+   "range": {
+    "type": "int",
+    "min": 1,
+    "max": 2
+   }
+  },
+  "HPF/KeyScl": {
+   "vst_index": 143,
+   "vst_name": "HPF: KeyFollow",
+   "range": null
+  },
+  "HPF/FMSrc": {
+   "vst_index": 144,
+   "vst_name": "HPF: FreqModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "HPF/FMDpt": {
+   "vst_index": 145,
+   "vst_name": "HPF: FreqModDepth",
+   "range": {
+    "type": "float",
+    "min": -120,
+    "max": 120
+   }
+  },
+  "HPF/PFreq": {
+   "vst_index": 146,
+   "vst_name": "HPF: Post-HPF Freq",
+   "range": {
+    "type": "int",
+    "min": -1,
+    "max": 3
+   }
+  },
+  "VCF1/Model": {
+   "vst_index": 147,
+   "vst_name": "VCF1: Model",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 4
+   }
+  },
+  "VCF1/Freq": {
+   "vst_index": 148,
+   "vst_name": "VCF1: Frequency",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 150
+   }
+  },
+  "VCF1/Res": {
+   "vst_index": 149,
+   "vst_name": "VCF1: Resonance",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "VCF1/FMSrc": {
+   "vst_index": 150,
+   "vst_name": "VCF1: FreqModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCF1/FMDpt": {
+   "vst_index": 151,
+   "vst_name": "VCF1: FreqModDepth",
+   "range": {
+    "type": "float",
+    "min": -120,
+    "max": 120
+   }
+  },
+  "VCF1/FM2Src": {
+   "vst_index": 152,
+   "vst_name": "VCF1: FreqMod2Src",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCF1/FM2Dpt": {
+   "vst_index": 153,
+   "vst_name": "VCF1: FreqMod2Depth",
+   "range": {
+    "type": "float",
+    "min": -120,
+    "max": 120
+   }
+  },
+  "VCF1/KeyScl": {
+   "vst_index": 154,
+   "vst_name": "VCF1: KeyFollow",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "VCF1/FFM": {
+   "vst_index": 155,
+   "vst_name": "VCF1: FilterFM",
+   "range": {
+    "type": "float",
+    "min": -24,
+    "max": 24
+   }
+  },
+  "VCF1/LMode": {
+   "vst_index": 156,
+   "vst_name": "VCF1: LadderMode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "VCF1/LColor": {
+   "vst_index": 157,
+   "vst_name": "VCF1: LadderColor",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "VCF1/SkRev": {
+   "vst_index": 158,
+   "vst_name": "VCF1: SlnKyRevision",
+   "range": {
+    "type": "int",
+    "min": 1,
+    "max": 2
+   }
+  },
+  "VCF1/SvfMode": {
+   "vst_index": 159,
+   "vst_name": "VCF1: SvfMode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "VCF1/Fback": {
+   "vst_index": 160,
+   "vst_name": "VCF1: Feedback",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "VCF1/ResSrc": {
+   "vst_index": 161,
+   "vst_name": "VCF1: ResModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCF1/ResDpt": {
+   "vst_index": 162,
+   "vst_name": "VCF1: ResModDepth",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCF1/FfmSrc": {
+   "vst_index": 163,
+   "vst_name": "VCF1: FmAmountModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCF1/FfmDpt": {
+   "vst_index": 164,
+   "vst_name": "VCF1: FmAmountModDepth",
+   "range": {
+    "type": "float",
+    "min": -24,
+    "max": 24
+   }
+  },
+  "VCF1/FbSrc": {
+   "vst_index": 165,
+   "vst_name": "VCF1: FeedbackModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCF1/FbDpt": {
+   "vst_index": 166,
+   "vst_name": "VCF1: FeedbackModDepth",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCF1/ShpMix": {
+   "vst_index": 267,
+   "vst_name": "VCF1: ShapeMix",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "VCF1/SMSrc": {
+   "vst_index": 268,
+   "vst_name": "VCF1: ShapeModSrc",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCF1/SMDpt": {
+   "vst_index": 269,
+   "vst_name": "VCF1: ShapeModDepth",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCF1/BpUbie": {
+   "vst_index": 270,
+   "vst_name": "VCF1: UhbieBandpass",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "VCA1/Pan": {
+   "vst_index": 167,
+   "vst_name": "VCA1: Pan",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCA1/Vol": {
+   "vst_index": 168,
+   "vst_name": "VCA1: Volume",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "VCA1/VCA": {
+   "vst_index": 169,
+   "vst_name": "VCA1: VCA",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "VCA1/ModSrc": {
+   "vst_index": 170,
+   "vst_name": "VCA1: Modulation",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCA1/ModDpt": {
+   "vst_index": 171,
+   "vst_name": "VCA1: ModDepth",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCA1/PanSrc": {
+   "vst_index": 172,
+   "vst_name": "VCA1: PanModulation",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCA1/PanDpt": {
+   "vst_index": 173,
+   "vst_name": "VCA1: PanModDepth",
+   "range": {
+    "type": "float",
+    "min": -100,
+    "max": 100
+   }
+  },
+  "VCA1/Mode": {
+   "vst_index": 174,
+   "vst_name": "VCA1: Mode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 23
+   }
+  },
+  "VCA1/Offset": {
+   "vst_index": 175,
+   "vst_name": "VCA1: Offset",
+   "range": null
+  },
+  "Scope1/frq": {
+   "vst_index": 176,
+   "vst_name": "Scope1: Frequency",
+   "range": {
+    "type": "float",
+    "min": -8,
+    "max": 8
+   }
+  },
+  "Scope1/scl": {
+   "vst_index": 177,
+   "vst_name": "Scope1: Scale",
+   "range": {
+    "type": "float",
+    "min": -5,
+    "max": 5
+   }
+  },
+  "FX1/Module": {
+   "vst_index": 178,
+   "vst_name": "FX1: Module",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 4
+   }
+  },
+  "Chrs1/Type": {
+   "vst_index": 179,
+   "vst_name": "Chrs1: Type",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "Chrs1/Rate": {
+   "vst_index": 180,
+   "vst_name": "Chrs1: Rate",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Chrs1/Depth": {
+   "vst_index": 181,
+   "vst_name": "Chrs1: Depth",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Chrs1/Wet": {
+   "vst_index": 182,
+   "vst_name": "Chrs1: Wet",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase1/Type": {
+   "vst_index": 183,
+   "vst_name": "Phase1: Type",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "Phase1/Rate": {
+   "vst_index": 184,
+   "vst_name": "Phase1: Rate",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase1/FB": {
+   "vst_index": 185,
+   "vst_name": "Phase1: Feedback",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase1/Stereo": {
+   "vst_index": 186,
+   "vst_name": "Phase1: Stereo",
+   "range": {
+    "type": "float",
+    "min": -50,
+    "max": 50
+   }
+  },
+  "Phase1/Sync": {
+   "vst_index": 187,
+   "vst_name": "Phase1: Sync",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "Phase1/Phase": {
+   "vst_index": 188,
+   "vst_name": "Phase1: Phase",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase1/Wet": {
+   "vst_index": 189,
+   "vst_name": "Phase1: Wet",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase1/Depth": {
+   "vst_index": 274,
+   "vst_name": "Phase1: Depth",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase1/Center": {
+   "vst_index": 275,
+   "vst_name": "Phase1: Center",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate1/Pre": {
+   "vst_index": 190,
+   "vst_name": "Plate1: PreDelay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 250
+   }
+  },
+  "Plate1/Diff": {
+   "vst_index": 191,
+   "vst_name": "Plate1: Diffusion",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate1/Damp": {
+   "vst_index": 192,
+   "vst_name": "Plate1: Damp",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate1/Decay": {
+   "vst_index": 193,
+   "vst_name": "Plate1: Decay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate1/Size": {
+   "vst_index": 194,
+   "vst_name": "Plate1: Size",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 200
+   }
+  },
+  "Plate1/Dry": {
+   "vst_index": 195,
+   "vst_name": "Plate1: Dry",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate1/Wet": {
+   "vst_index": 196,
+   "vst_name": "Plate1: Wet",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay1/LDel": {
+   "vst_index": 197,
+   "vst_name": "Delay1: Left Delay",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 16
+   }
+  },
+  "Delay1/CDel": {
+   "vst_index": 198,
+   "vst_name": "Delay1: Center Delay",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 16
+   }
+  },
+  "Delay1/RDel": {
+   "vst_index": 199,
+   "vst_name": "Delay1: Right Delay",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 16
+   }
+  },
+  "Delay1/SVol": {
+   "vst_index": 200,
+   "vst_name": "Delay1: Side Vol",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay1/CVol": {
+   "vst_index": 201,
+   "vst_name": "Delay1: Center Vol",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay1/FeedB": {
+   "vst_index": 202,
+   "vst_name": "Delay1: Feedback",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay1/HP": {
+   "vst_index": 203,
+   "vst_name": "Delay1: HP",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay1/LP": {
+   "vst_index": 204,
+   "vst_name": "Delay1: LP",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay1/Dry": {
+   "vst_index": 205,
+   "vst_name": "Delay1: Dry",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay1/Wow": {
+   "vst_index": 206,
+   "vst_name": "Delay1: Wow",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/Mode": {
+   "vst_index": 207,
+   "vst_name": "Rtary1: Mode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "Rtary1/Mix": {
+   "vst_index": 208,
+   "vst_name": "Rtary1: Mix",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/Bal": {
+   "vst_index": 209,
+   "vst_name": "Rtary1: Balance",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/Drive": {
+   "vst_index": 210,
+   "vst_name": "Rtary1: Drive",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/Stereo": {
+   "vst_index": 211,
+   "vst_name": "Rtary1: Stereo",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/Out": {
+   "vst_index": 212,
+   "vst_name": "Rtary1: Out",
+   "range": {
+    "type": "float",
+    "min": -20,
+    "max": 20
+   }
+  },
+  "Rtary1/Slow": {
+   "vst_index": 213,
+   "vst_name": "Rtary1: Slow",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/Fast": {
+   "vst_index": 214,
+   "vst_name": "Rtary1: Fast",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/RTime": {
+   "vst_index": 215,
+   "vst_name": "Rtary1: RiseTime",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary1/Cont": {
+   "vst_index": 216,
+   "vst_name": "Rtary1: Controller",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  },
+  "FX2/Module": {
+   "vst_index": 217,
+   "vst_name": "FX2: Module",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 4
+   }
+  },
+  "Chrs2/Type": {
+   "vst_index": 218,
+   "vst_name": "Chrs2: Type",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "Chrs2/Rate": {
+   "vst_index": 219,
+   "vst_name": "Chrs2: Rate",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Chrs2/Depth": {
+   "vst_index": 220,
+   "vst_name": "Chrs2: Depth",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Chrs2/Wet": {
+   "vst_index": 221,
+   "vst_name": "Chrs2: Wet",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase2/Type": {
+   "vst_index": 222,
+   "vst_name": "Phase2: Type",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "Phase2/Rate": {
+   "vst_index": 223,
+   "vst_name": "Phase2: Rate",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase2/FB": {
+   "vst_index": 224,
+   "vst_name": "Phase2: Feedback",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase2/Stereo": {
+   "vst_index": 225,
+   "vst_name": "Phase2: Stereo",
+   "range": {
+    "type": "float",
+    "min": -50,
+    "max": 50
+   }
+  },
+  "Phase2/Sync": {
+   "vst_index": 226,
+   "vst_name": "Phase2: Sync",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 1
+   }
+  },
+  "Phase2/Phase": {
+   "vst_index": 227,
+   "vst_name": "Phase2: Phase",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase2/Wet": {
+   "vst_index": 228,
+   "vst_name": "Phase2: Wet",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase2/Depth": {
+   "vst_index": 276,
+   "vst_name": "Phase2: Depth",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Phase2/Center": {
+   "vst_index": 277,
+   "vst_name": "Phase2: Center",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate2/Pre": {
+   "vst_index": 229,
+   "vst_name": "Plate2: PreDelay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 250
+   }
+  },
+  "Plate2/Diff": {
+   "vst_index": 230,
+   "vst_name": "Plate2: Diffusion",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate2/Damp": {
+   "vst_index": 231,
+   "vst_name": "Plate2: Damp",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate2/Decay": {
+   "vst_index": 232,
+   "vst_name": "Plate2: Decay",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate2/Size": {
+   "vst_index": 233,
+   "vst_name": "Plate2: Size",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 200
+   }
+  },
+  "Plate2/Dry": {
+   "vst_index": 234,
+   "vst_name": "Plate2: Dry",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Plate2/Wet": {
+   "vst_index": 235,
+   "vst_name": "Plate2: Wet",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay2/LDel": {
+   "vst_index": 236,
+   "vst_name": "Delay2: Left Delay",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 16
+   }
+  },
+  "Delay2/CDel": {
+   "vst_index": 237,
+   "vst_name": "Delay2: Center Delay",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 16
+   }
+  },
+  "Delay2/RDel": {
+   "vst_index": 238,
+   "vst_name": "Delay2: Right Delay",
+   "range": {
+    "type": "float",
+    "min": 1,
+    "max": 16
+   }
+  },
+  "Delay2/SVol": {
+   "vst_index": 239,
+   "vst_name": "Delay2: Side Vol",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay2/CVol": {
+   "vst_index": 240,
+   "vst_name": "Delay2: Center Vol",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay2/FeedB": {
+   "vst_index": 241,
+   "vst_name": "Delay2: Feedback",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay2/HP": {
+   "vst_index": 242,
+   "vst_name": "Delay2: HP",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay2/LP": {
+   "vst_index": 243,
+   "vst_name": "Delay2: LP",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay2/Dry": {
+   "vst_index": 244,
+   "vst_name": "Delay2: Dry",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Delay2/Wow": {
+   "vst_index": 245,
+   "vst_name": "Delay2: Wow",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/Mode": {
+   "vst_index": 246,
+   "vst_name": "Rtary2: Mode",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 2
+   }
+  },
+  "Rtary2/Mix": {
+   "vst_index": 247,
+   "vst_name": "Rtary2: Mix",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/Bal": {
+   "vst_index": 248,
+   "vst_name": "Rtary2: Balance",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/Drive": {
+   "vst_index": 249,
+   "vst_name": "Rtary2: Drive",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/Stereo": {
+   "vst_index": 250,
+   "vst_name": "Rtary2: Stereo",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/Out": {
+   "vst_index": 251,
+   "vst_name": "Rtary2: Out",
+   "range": {
+    "type": "float",
+    "min": -20,
+    "max": 20
+   }
+  },
+  "Rtary2/Slow": {
+   "vst_index": 252,
+   "vst_name": "Rtary2: Slow",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/Fast": {
+   "vst_index": 253,
+   "vst_name": "Rtary2: Fast",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/RTime": {
+   "vst_index": 254,
+   "vst_name": "Rtary2: RiseTime",
+   "range": {
+    "type": "float",
+    "min": 0,
+    "max": 100
+   }
+  },
+  "Rtary2/Cont": {
+   "vst_index": 255,
+   "vst_name": "Rtary2: Controller",
+   "range": {
+    "type": "int",
+    "min": 0,
+    "max": 3
+   }
+  }
+ },
+ "unmapped_vst": {
+  "17": "VCC: MultiCore",
+  "18": "OPT: Accuracy",
+  "19": "OPT: OfflineAcc"
+ }
+}
